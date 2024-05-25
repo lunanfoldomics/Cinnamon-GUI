@@ -1,2 +1,4 @@
+<img src="MEDIGUI_ConvNet_Logo.png" alt="logo" style="display:block; margin:auto;">
+
 # Cinnamon-GUI
-ConvolutIonal Neural Network And multimOdal learNing with Graphic User Interface for Digital Pathology
+Convolutional Neural Network And multimodal learning with Graphic User Interface for Digital Pathology
