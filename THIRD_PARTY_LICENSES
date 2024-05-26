@@ -1,11 +1,22 @@
 ### File `THIRD_PARTY_LICENSES`
 
 ```markdown
+
 # Third Party Licenses
+
+This project is distributed under the GNU Affero General Public License v3 (AGPLv3). 
+It includes components that are licensed under various other licenses as specified below. 
+As per the terms of the AGPLv3, the entire combined work is distributed under AGPLv3. 
+
+All original copyright and license notices for third-party components have been retained in their respective source files.
+
+You can obtain a copy of the AGPLv3 at https://www.gnu.org/licenses/agpl-3.0.html.
+
 
 ## Python Standard Library and Matplotlib
 
-This project uses Python, Matplotlib, and the following Python Standard Library modules: io, os, shutil, re, contextlib, datetime, pickle, subprocess, and json. These are licensed under the PSF License. The full text of the license is included below.
+This project uses Python, Matplotlib, and the following Python Standard Library modules: io, os, shutil, re, contextlib, datetime, 
+pickle, subprocess, and json. These are licensed under the PSF License. The full text of the license is included below.
 
 ---
 PSF LICENSE AGREEMENT FOR PYTHON 3.12.3
