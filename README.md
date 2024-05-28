@@ -6,7 +6,7 @@
 
 ### ConvolutIonal Neural Network And multimOdal learNing with Graphic User Interface for Digital Pathology
 
-CINNAMON-GUI is an advanced digital pathology tool that leverages the power of convolutional neural networks (CNN) and multimodal learning to provide an intuitive graphical user interface for medical professionals. This tool is designed to enhance the analysis and interpretation of pathological samples, making it easier to diagnose and study various diseases.
+CINNAMON-GUI is an advanced digital pathology tool that leverages the power of convolutional neural networks (CNN) and multimodal learning to provide an intuitive graphical user interface for medical professionals. This tool is designed to enhance the analysis and interpretation of pathological samples, making it easier to study various diseases.
 
 #### Developed by Lunan Foldomics LLC, Copyright (C) 2024
 
@@ -14,9 +14,9 @@ For more information, visit our website: [Lunan Foldomics LLC](http://www.lunanf
 
 ### Features
 - **Advanced CNN Models**: Utilize state-of-the-art convolutional neural networks optimized for digital pathology.
-- **Multimodal Learning Capabilities**: Integrate multiple types of data to improve diagnostic accuracy.
+- **Multimodal Learning Capabilities**: Integrate multiple types of data to improve analysis accuracy (only for research purpose).
 - **User-Friendly Interface**: Simplify the workflow with an intuitive GUI, designed for professionals without technical expertise.
-- **Scalable Solutions**: Suitable for individual researchers and large healthcare organizations.
+- **Scalable Solutions**: Suitable for individual researchers and large organizations.
 
 ### Installation
 1. Download the latest version of CINNAMON-GUI from our [official repository](https://github.com/lunanfoldomics/Cinnamon-GUI/).
