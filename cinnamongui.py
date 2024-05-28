@@ -3,7 +3,7 @@
 
 '''
 CINNAMON-GUI version 0.4.0
-ConvolutIonal Neural Network And multimOdal learNing with Graphic User Interface
+ConvolutIonal Neural Network And multimOdal learNing with Graphic User Interface for Digital Pathology
 Lunan Foldomics LLC, 2024
 www.lunanfoldomicsllc.com/
 GNU General Public License v3.0
