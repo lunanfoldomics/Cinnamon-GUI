@@ -132,6 +132,7 @@ model = cinnamongui.trainCNN(X_train=X_train, X_test=X_test, Y_train=Y_train, Y_
 
 ## Dataset
 As example of implementation we uses the SIPAKMED Dataset
+
 Download Link: https://www.cs.uoi.gr/~marina/sipakmed.html
 
 Once the SipakMed dataset is downloaded, it needs to be unzipped into a directory, which we might call "sipakmed." The main directory structure of SipakMed is not particularly complex, but it is essential to understand where the images are located within the five cellular categories to correctly construct the pickle file. Therefore, a script must be generated to search for images within the sipakmed directory and generate the pickle file. Here is an example of how this can be done:
@@ -188,7 +189,7 @@ Finally, create the dataset:
 # Warning: the OS command for producing the index file list.txt works only with iOS and Linux systems
 images_array = []
 label = 0
-size = 256
+size = 256 # We want a 256 X 256 pixel resolution.
 
 print('I\'m creating the pickle dataset...')
 
@@ -219,7 +220,7 @@ print('Dataset created!')
 print('bye.')
 ```
 
-Now that your pickle dataset is ready, you can visulize the images in this way:
+Congrats! Your  256X256.pickle dataset is ready, and now you can visulize one of the images per time in this way:
 
 ```
 # Visualizing dataset
