@@ -8,13 +8,17 @@ tags:
   - CNN
   - Convolutional Neural Network
   - Image Processing
-author:
+authors:
   - name: Luca Zammataro
   - orcid: 0000-0002-4348-6341
 
-affiliation:
+affiliations:
   - name: Lunan Foldomics LLC, Houston, TX, United States of America
     index: 1
+date: May, 30 2024
+bibliography: paper.bib
+---
+
 # Summary
 
 Cervical cancer is a significant cause of death for women worldwide. In 2020, there were approximately 604,000 new cases and 342,000 deaths (Ferlay et al., 2021). This type of cancer is closely linked to persistent infection by certain types of human papillomavirus (HPV), particularly HPV-16 and HPV-18, which account for about 70% of cervical cancer cases (Walboomers et al., 1999, Zammataro PNAS).
