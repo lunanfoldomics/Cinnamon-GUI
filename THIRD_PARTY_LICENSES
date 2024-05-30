@@ -1,13 +1,13 @@
 ```
 # Third Party Licenses
 
-This project is distributed under the GNU Affero General Public License v3 (AGPLv3). 
+This project is distributed under the GNU General Public License v3 (GPLv3). 
 It includes components that are licensed under various other licenses as specified below. 
-As per the terms of the AGPLv3, the entire combined work is distributed under AGPLv3. 
+As per the terms of the GPLv3, the entire combined work is distributed under GPLv3. 
 
 All original copyright and license notices for third-party components have been retained in their respective source files.
 
-You can obtain a copy of the AGPLv3 at https://www.gnu.org/licenses/agpl-3.0.html.
+You can obtain a copy of the GPL v3 at https://www.gnu.org/licenses/gpl-3.0.en.html
 
 
 ## Python Standard Library and Matplotlib
