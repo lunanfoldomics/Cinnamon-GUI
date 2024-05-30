@@ -10,6 +10,8 @@ CINNAMON-GUI is an advanced digital pathology tool that leverages the power of c
 
 #### Developed by Lunan Foldomics LLC, Copyright (C) 2024
 
+Disclaimer: the software use is intended ONLY for experimental purposes, not for clinical.
+
 For more information, visit our website: [Lunan Foldomics LLC](http://www.lunanfoldomicsllc.com/)
 
 ### Features
@@ -128,12 +130,122 @@ You can manipulate training epochs, batch size, and two regularization parameter
 model = cinnamongui.trainCNN(X_train=X_train, X_test=X_test, Y_train=Y_train, Y_test=Y_test, epochs=30, batch_size=32)
 ```
 
-## Datasets 
+## Dataset
 As example of implementation we uses the SIPAKMED Dataset
-SIPAKMED Dataset Download Link: https://www.cs.uoi.gr/~marina/sipakmed.html
+Download Link: https://www.cs.uoi.gr/~marina/sipakmed.html
+
+Once the SipakMed dataset is downloaded, it needs to be unzipped into a directory, which we might call "sipakmed." The main directory structure of SipakMed is not particularly complex, but it is essential to understand where the images are located within the five cellular categories to correctly construct the pickle file. Therefore, a script must be generated to search for images within the sipakmed directory and generate the pickle file. Here is an example of how this can be done:
+Upload all the necessary Python libraries
+```
+# routine for converting Bmp to a Pickle Dataset
+
+import numpy as np
+from numpy import load
+import pandas as pd
+import matplotlib.pyplot as plt
+from random import randint
+from matplotlib.pyplot import imshow
+from matplotlib.pyplot import figure
+import pickle
+import math
+import subprocess
+import os
+import cv2
+from PIL import Image
+%matplotlib inline
+```
+Define a Working Directory using os.getcwd() and concatenate the WD path to the sipakmed directory, where all the images are stored:
+
+```
+WD = os.getcwd()+'/sipakmed/'
+```
+
+Make a list of paths:
+
+```
+'''
+The cell categories are assigned to labels
+
+Dyskeratotic 0
+Koilocytotic 1
+Metaplastic 2
+Parabasal 3
+Superficial-Intermediate 4
+'''
+
+# Creating paths
+
+path = []
+path.append(WD+'/im_Dyskeratotic/im_Dyskeratotic/CROPPED/')
+path.append(WD+'/im_Koilocytotic/im_Koilocytotic/CROPPED/')
+path.append(WD+'/im_Metaplastic/im_Metaplastic/CROPPED/')
+path.append(WD+'/im_Parabasal/im_Parabasal/CROPPED/')
+path.append(WD+'/im_Superficial-Intermediate/im_Superficial-Intermediate/CROPPED/')
+```
+
+Finally, create the dataset:
+```
+# Warning: the OS command for producing the index file list.txt works only with iOS and Linux systems
+images_array = []
+label = 0
+size = 256
+
+print('I\'m creating the pickle dataset...')
+
+for p in range(len(path)):
+    command = str("rm " +path[p]+ str("sunset_resized.bmp"))
+    os.system(command)    
+    
+    print('label: ',label)    
+    command = str("ls -lth ") + path[p]+ " | " + str("awk '{print $10}' | grep bmp | sed 's/.bmp//' > " + path[p]+ str("list.txt"))
+    os.system(command)
+    df_list = pd.read_csv(path[p]+"list.txt", sep='\t', header=0)
+    df_list.rename(columns={'list.txt': 'filenames'}, inplace=True)
 
 
-Disclaimer: the software use is intended ONLY for experimental purposes, not for clinical.
+    for i in range(len(df_list)):
+        image = Image.open(path[p]+df_list.values[i][0]+'.bmp')
+        sunset_resized = image.resize((size, size))
+        sunset_resized.save(path[p]+'sunset_resized.bmp')
+        images_array.append([cv2.imread(path[p]+'sunset_resized.bmp').flatten(), label])
+        
+    label = label+1
+
+df = pd.DataFrame(images_array)
+df.rename(columns={0: 'X', 1: 'y'}, inplace=True)
+df.to_pickle(WD+str(size)+'X'+str(size)+'.pickle')
+
+print('Dataset created!')
+print('bye.')
+```
+
+Now that your pickle dataset is ready, you can visulize the images in this way:
+
+```
+# Visualizing dataset
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Specify here what image you want to see
+Image_ID = 1000
+
+with open(WD+str(size)+'X'+str(size)+'.pickle', 'rb') as handle:
+    CVX = pickle.load(handle)
+
+X = np.stack(CVX['X'])
+Y = np.int64(CVX['y'])    
+
+# Reshape the image
+image_size = int(np.sqrt(X.shape[1] / 3))  # Dimensione di ciascun lato dell'immagine quadrata
+X_reshaped = X.reshape(-1, image_size, image_size, 3)
+
+# One-image visualization
+plt.imshow(X_reshaped[Image_ID])
+plt.axis('off')
+plt.show()
+```
+
 
 ## Additional Files
 The file "classes.tsv" contains pathological classes associated with the labels. It is pivotal for displaying the results.
