@@ -88,12 +88,17 @@ import cinnamongui as cinnamongui
 Upload a dataset with LoadImageArchive(path):
 The dataset must be a pickle file of a NumPy array (more information will be available soon about how to construct a dataset)
 ```
-X, Y = cinnamongui.LoadImageArchive('path_to_a_dataset.pickle')
+X, y = cinnamongui.LoadImageArchive(classes=['D', 'K', 'M', 'P', 'SI'], path='path_to_a_dataset.pickle')
 ```
 
-Generating training and setting datasets
+Splitting Training and Testing datasets
 ```
-X_train, X_test, Y_train, Y_test = cinnamongui.splitDataset(X=X, Y=Y, test_size=0.2, random_state=42)
+X_train, X_test, Y_train, Y_test = cinnamongui.splitDataset(X=X, Y=y, test_size=0.2, random_state=42)
+```
+
+Loading a saved model
+```
+model = cinnamongui.loadModel(model_path='path_to_a_model_directory')
 ```
 
 Check the size of all the arrays
