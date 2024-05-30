@@ -70,7 +70,7 @@ source deactivate  # On macOS and Linux
 
 ## Run Cinnamon-GUI
 
-The python module cinnamongui.py contains all the Cinnamon-GUIt functions and can be imported in a Jupyter Notebook cell typying:
+The python module cinnamongui.py contains all the Cinnamon-GUI functions and can be imported in a Jupyter Notebook cell typying:
 
 ```
 import cinnamongui
