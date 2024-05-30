@@ -129,7 +129,9 @@ model = cinnamongui.trainCNN(X_train=X_train, X_test=X_test, Y_train=Y_train, Y_
 ```
 
 ## Datasets 
-To complete
+As example of implementation we uses the SIPAKMED Dataset
+SIPAKMED Dataset Download Link: https://www.cs.uoi.gr/~marina/sipakmed.html
+
 
 Disclaimer: the software use is intended ONLY for experimental purposes, not for clinical.
 
