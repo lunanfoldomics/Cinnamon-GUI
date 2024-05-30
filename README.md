@@ -60,6 +60,7 @@ pip install scikit-learn==1.2.2
 pip install ipywidgets==8.0.4
 pip install ipyfilechooser==0.6.0
 pip install ipython==8.11.0
+pip install labelme
 
 # Deactivate the virtual environment
 conda deactivate  # On Windows
