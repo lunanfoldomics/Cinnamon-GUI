@@ -47,11 +47,11 @@ The SipakMed database, which consists of approximately 4400 color images of cell
 CINNAMON-GUI includes internal functions for image normalization and a suite of functions for randomly splitting the dataset into training and testing sets for CNN learning. Users can select from a wide range of seeds for random splitting via the scikit-learn package using a dedicated sliding bar in the GUI's Training Bar.
 Table 1 illustrates the architecture implemented for classifying the SIPaKMeD dataset. With this architecture, the CNN achieved a training accuracy of 91% on the validation test after 30 epochs of learning, with both regularization parameters set to 0.001 and an F1-Score of 0.98. Additionally, a custom cross-validation test using RepeatedKFold was implemented through Scikit-Learn and executed with a 15-fold validation, reaching an accuracy of 99% (std =0.0 ).
 The Feature Mapping function of CINNAMON-GUI can be handy for identifying Koilocytes, which are prodromal cells of a transformation into Dyskeratocytes. Koilocytes are squamous cells that exhibit morphological alterations indicative of human papillomavirus (HPV) infection. Koilocytosis is pathognomonic, though not required, for diagnosing low-grade squamous intraepithelial lesions (LSIL). The main morphological alterations observed in koilocytosis include
-•	Karyolysis (chromatin within the nucleus appears fragmented and dispersed, giving the nucleus a translucent or granular appearance);
-•	Nuclear hypertrophy (the nucleus is more significant than usual and may exhibit increased chromatin density);
-•	Increased nuclear/cytoplasmic ratio (the nucleus occupies a more significant proportion of the cellular space compared to the cytoplasm);
-•	Clear perinuclear zone (a clear zone is observed around the nucleus, known as the "clear perinuclear zone");
-•	Cytoplasmic vacuolization (the cytoplasm may show alterations such as the presence of vacuoles, giving the cell a sponge-like appearance).
+1) Karyolysis (chromatin within the nucleus appears fragmented and dispersed, giving the nucleus a translucent or granular appearance);
+2) Nuclear hypertrophy (the nucleus is more significant than usual and may exhibit increased chromatin density);
+3) Increased nuclear/cytoplasmic ratio (the nucleus occupies a more significant proportion of the cellular space compared to the cytoplasm);
+4) Clear perinuclear zone (a clear zone is observed around the nucleus, known as the "clear perinuclear zone");
+5) Cytoplasmic vacuolization (the cytoplasm may show alterations such as the presence of vacuoles, giving the cell a sponge-like appearance).
 Feature mapping, which involves mapping the various layers of the CNN through our software, makes identifying these pathological traits much more accessible, enhancing the accuracy and reliability of medical diagnoses. This feature can be enabled via a checkbox located within the Testing Tab.
 
 # Conclusion
