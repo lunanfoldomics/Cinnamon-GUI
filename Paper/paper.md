@@ -67,6 +67,8 @@ Table 1 illustrates the architecture implemented for classifying the SIPaKMeD da
 | dense (Dense)            | (None, 256)           | 12845312  |
 | dense_1 (Dense)          | (None, 5)             | 1285      |
 
+Table 1. Detailed Architecture of CINNAMON-GUI.
+
 With this architecture, the CNN achieved a training accuracy of 93% on the validation test after 30 epochs of learning, with both regularization parameters set to 0.001 and an F1-Score of 0.98. (\ref{fig_2}.)
 ![](./LearningCurves.png)
 [\label{fig_2} The accuracy plot after training. Blue and green curves correspond to respectively training and testing accuracy reached after 30 epochs. Yellow and red curves correspond to respectively training and testing loss.](./LearningCurves.png)
