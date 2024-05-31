@@ -38,8 +38,8 @@ The core functionality of CINNAMON-GUI is its sophisticated CNN models, designed
 The software supports loading datasets from `.pickle` files, which conveniently package images and their corresponding labels. This integration simplifies the process of managing large sets of medical images. Additionally, the tool offers functionalities for preprocessing and normalizing images, ensuring they are optimally conditioned for CNN processing.
 Training and validation of models are central aspects of CINNAMON-GUI, featuring a user-friendly interface that facilitates the specification of training parameters such as epochs and batch sizes (\ref{fig_1}.)
 
-![](./TrainingTab.png)
-[\label{fig_1}The Cinnamon-GUI Training Tab, users have full control over the adjustments of the CNN architecture.They can fine-tune the filters, the number of neurons, and activation functions, thereby customizing the tool to their specific needs. Additionally, they can manipulate training epochs, batch size, and two regularization parameters to enhance the training performances.](./TrainingTab.png)
+![](./TrainingControlsTab.png)
+[\label{fig_1}The Cinnamon-GUI Training Tab, users have full control over the adjustments of the CNN architecture.They can fine-tune the filters, the number of neurons, and activation functions, thereby customizing the tool to their specific needs. Additionally, they can manipulate training epochs, batch size, and two regularization parameters to enhance the training performances.](./TrainingControlsTab.png)
 
 
 The software provides real-time updates on training progress, displayed through a progress bar and detailed logs within a dedicated output window. This not only keeps the user informed but also aids in diagnosing any issues during the training phase.
@@ -52,6 +52,21 @@ CINNAMON-GUI also extends its functionality by integrating external tools such a
 The SipakMed database, which consists of 4049 color images of cells from cervical pap smears, represents a vital example of this tool.  Images have been classified into five cellular subclasses: Superficial-Intermediate Cells, Parabasal Cells, Metaplastic Cells, Koilocytes, and Dyskeratocytes. For our work, the database was restructured into a numpy array and subsequently inserted into a Pandas DataFrame, with each row corresponding to a sequence of 65536 pixels, each represented by an RGB triplet for color and associated with an output label. Once loaded into a NumPy vector, the images are reshaped into 256x256 matrices.
 CINNAMON-GUI includes internal functions for image normalization and a suite of functions for randomly splitting the dataset into training and testing sets for CNN learning. Users can select from a wide range of seeds for random splitting via the scikit-learn package using a dedicated sliding bar in the GUI's Training Tab.
 Table 1 illustrates the architecture implemented for classifying the SIPaKMeD dataset. 
+
+| Layer (type)             | Output Shape          | Param #   |
+|--------------------------|-----------------------|-----------|
+| conv2d (Conv2D)          | (None, 254, 254, 32)  | 896       |
+| max_pooling2d (MaxPooling2D) | (None, 127, 127, 32) | 0       |
+| conv2d_1 (Conv2D)        | (None, 125, 125, 64)  | 18496     |
+| max_pooling2d_1 (MaxPooling2D) | (None, 62, 62, 64)  | 0       |
+| conv2d_2 (Conv2D)        | (None, 60, 60, 128)   | 73856     |
+| max_pooling2d_2 (MaxPooling2D) | (None, 30, 30, 128) | 0       |
+| conv2d_3 (Conv2D)        | (None, 28, 28, 256)   | 295168    |
+| max_pooling2d_3 (MaxPooling2D) | (None, 14, 14, 256) | 0       |
+| flatten (Flatten)        | (None, 50176)         | 0         |
+| dense (Dense)            | (None, 256)           | 12845312  |
+| dense_1 (Dense)          | (None, 5)             | 1285      |
+
 With this architecture, the CNN achieved a training accuracy of 93% on the validation test after 30 epochs of learning, with both regularization parameters set to 0.001 and an F1-Score of 0.98. (\ref{fig_2}.)
 ![](./LearningCurves.png)
 [\label{fig_2} The accuracy plot after training. Blue and green curves correspond to respectively training and testing accuracy reached after 30 epochs. Yellow and red curves correspond to respectively training and testing loss.](./LearningCurves.png)
