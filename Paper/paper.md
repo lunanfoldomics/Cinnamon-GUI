@@ -85,7 +85,7 @@ The main morphological alterations observed in koilocytosis include Karyolysis (
 The CINNAMON-GUI Feature mapping algorithm, which involves mapping the various layers of the CNN through our software, makes identifying these pathological traits much more accessible, enhancing the accuracy and reliability of medical diagnoses. This feature can be enabled via a checkbox located within the Testing Tab. (\ref{fig_4}.)
 
 ![](./FeatureMapping_1.png)
-[\label{fig_3} The accuracy plot after training. Blue and green curves correspond to respectively training and testing accuracy reached after 30 epochs. Yellow and red curves correspond to respectively training and testing loss.](./FeatureMapping_1.png)
+[\label{fig_3}Upon toggling the "Feature Mapping" checkbox in the Model Testing Tab,  CINNAMON-GUI a series of plots illustrating activations from all CNN layers, facilitating the identification of characteristic subcellular patterns.](./FeatureMapping_1.png)
 
 
 
