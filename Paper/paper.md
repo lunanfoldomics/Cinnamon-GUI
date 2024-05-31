@@ -54,7 +54,7 @@ CINNAMON-GUI includes internal functions for image normalization and a suite of 
 Table 1 illustrates the architecture implemented for classifying the SIPaKMeD dataset. 
 With this architecture, the CNN achieved a training accuracy of 93% on the validation test after 30 epochs of learning, with both regularization parameters set to 0.001 and an F1-Score of 0.98. (\ref{fig_2}.)
 ![](./LearningCurves.png)
-[\label{fig_2} The accuracy plot after training. Blue and green curves correspond to respectively training and testing accuracy reached after 30 epochs. Yellow and red curves correspond to respectively training and testing loss..](./LearningCurves.png)
+[\label{fig_2} The accuracy plot after training. Blue and green curves correspond to respectively training and testing accuracy reached after 30 epochs. Yellow and red curves correspond to respectively training and testing loss.](./LearningCurves.png)
 
 Additionally, a custom cross-validation test using RepeatedKFold was implemented through Scikit-Learn and executed with a 15-fold validation, reaching an accuracy of 99% (std =0.0 ).
 The Feature Mapping function of CINNAMON-GUI can be handy for identifying Koilocytes, which are prodromal cells of a transformation into Dyskeratocytes. Koilocytes are squamous cells that exhibit morphological alterations indicative of human papillomavirus (HPV) infection. Koilocytosis is pathognomonic, though not required, for diagnosing low-grade squamous intraepithelial lesions (LSIL). The main morphological alterations observed in koilocytosis include
