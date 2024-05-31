@@ -38,10 +38,7 @@ The core functionality of CINNAMON-GUI is its sophisticated CNN models, designed
 The software supports loading datasets from `.pickle` files, which conveniently package images and their corresponding labels. This integration simplifies the process of managing large sets of medical images. Additionally, the tool offers functionalities for preprocessing and normalizing images, ensuring they are optimally conditioned for CNN processing.
 Training and validation of models are central aspects of CINNAMON-GUI, featuring a user-friendly interface that facilitates the specification of training parameters such as epochs and batch sizes \autoref{fig_1}.
 
-![\label{fig_1}The Cinnamon-GUI Training Tab, users have full control over the adjustments of the CNN architecture. 
-They can fine-tune the filters, the number of neurons, and activation functions, thereby customizing the tool to 
-their specific needs. Additionally, they can manipulate training epochs, batch size, and two regularization 
-parameters to enhance the training performances.](./Training_Tab.png)
+![\label{fig_1}](./Training_Tab.png)
 
 ![\label{fig_2}Schematic showing an example state, a structure labeled with site IDs, and a possible  neighborhood for site 13 in a simulation with a two dimensional grid structure.](./composite.png)
 
