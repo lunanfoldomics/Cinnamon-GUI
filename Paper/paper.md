@@ -48,7 +48,7 @@ to enhance the training performances.  \label{fig_1} ](Training_Tab.png)
 
 ![Definition of a simple reaction-diffusion system implementing an
 association reaction over 3 cells using the JSON/dictionary format.
-The rates used were: $k_+ = 1$ M$^{-1}$s$^{-1}$, $k_-= 1$ s$^{-1}$. \label{jsonsyntax} ](jsonsyntax.png)
+The rates used were: $k_+ = 1$ M$^{-1}$s$^{-1}$, $k_-= 1$ s$^{-1}$. \label{jsonsyntax} ](Training_Tab.png)
 
 
 
