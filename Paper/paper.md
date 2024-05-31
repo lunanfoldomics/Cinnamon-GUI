@@ -52,6 +52,7 @@ The Feature Mapping function of CINNAMON-GUI can be handy for identifying Koiloc
 3) Increased nuclear/cytoplasmic ratio (the nucleus occupies a more significant proportion of the cellular space compared to the cytoplasm);
 4) Clear perinuclear zone (a clear zone is observed around the nucleus, known as the "clear perinuclear zone");
 5) Cytoplasmic vacuolization (the cytoplasm may show alterations such as the presence of vacuoles, giving the cell a sponge-like appearance).
+For a comprehensive overview of the mentioned cellular traits in various pathological contexts, please see @Walker1994Endonuclease, @Iglesias-Guimarais2013Chromatin, @Zierler2006Ultraviolet, @Errami2012Apoptotic, and @Burton2003A.
 Feature mapping, which involves mapping the various layers of the CNN through our software, makes identifying these pathological traits much more accessible, enhancing the accuracy and reliability of medical diagnoses. This feature can be enabled via a checkbox located within the Testing Tab.
 
 # Conclusion
