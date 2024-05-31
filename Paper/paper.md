@@ -45,7 +45,13 @@ Training and validation of models are central aspects of CINNAMON-GUI, featuring
 The software provides real-time updates on training progress, displayed through a progress bar and detailed logs within a dedicated output window. This not only keeps the user informed but also aids in diagnosing any issues during the training phase.
 Visualization tools are a standout feature, offering insights into CNN's operations. Users can generate plots to visualize learning curves, illustrating the training and validation losses and accuracies over time. Moreover, the software can display feature maps from different CNN layers, providing a deeper understanding of how the model processes and interprets the input images.
 Model management is handled efficiently, with options to save trained models and their configurations for future use or to load pre-existing models. This functionality ensures that valuable models are preserved and easily shared within the scientific community, promoting reproducibility and collaborative improvements.
-CINNAMON-GUI also extends its functionality by integrating external tools such as Labelme directly within the interface. This integration enables users to define regions of interest on images for more focused analysis, highlighting the tool's commitment to providing a comprehensive suite for digital pathology analysis. This integration not only enhances the tool's versatility but also streamlines the analysis process, making it more efficient for the user.
+CINNAMON-GUI also extends its functionality by integrating external tools such as Labelme directly within the interface.
+
+![](./ROIs_with_Labelme.png)
+[\label{fig_1}CINNAMON-GUI can call the Labelme program to generate Regions of Interest (ROI) and manually select cells from an imported Pap smear file. This option allows for the generation of datasets that can be analyzed and classified.](./ROIs_with_Labelme.png)
+
+This integration enables users to define regions of interest on images for more focused analysis, highlighting the tool's commitment to providing a comprehensive suite for digital pathology 
+analysis. This integration not only enhances the tool's versatility but also streamlines the analysis process, making it more efficient for the user.
 
 # Application
 
