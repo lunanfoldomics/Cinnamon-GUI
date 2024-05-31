@@ -88,11 +88,13 @@ Other specific alterations inlcude:
 -  Clear perinuclear zone (clear area around the nucleus). Again, Krawczyk et al. (2011) and Lawson et al. (2009) describe the presence of a perinuclear halo or clear zone, a hallmark of koilocytes, indicating a clear perinuclear zone @Krawczyk2008Koilocytosis, @Lawson2009Koilocytes.
 The CINNAMON-GUI Feature mapping algorithm, which involves mapping the various layers of the CNN through our software, makes identifying these pathological traits much more accessible, enhancing the accuracy and reliability of medical diagnoses. This feature can be enabled via a checkbox located within the Testing Tab. (\ref{fig_4}.)
 
-![](./FeatureMapping_1.png)
-[\label{fig_3}Upon toggling the "Feature Mapping" checkbox in the Model Testing Tab,  CINNAMON-GUI a series of plots illustrating activations from all CNN layers, facilitating the identification of characteristic subcellular patterns.](./FeatureMapping_1.png)
+![](./FeatureMapping.png)
+[\label{fig_3Upon toggling the "Feature Mapping" checkbox in the Model Testing Tab,  CINNAMON-GUI a series of plots illustrating activations from all CNN layers, facilitating the identification of characteristic subcellular patterns. In the image identified by CINNAMON-GUI as Koilocyte (K), evident nuclear alterations (increased nuclear/cytoplasmic ratio and hypertrophy) and signs of karyolysis are present. The feature maps displayed on the right can identify patterns that CNN considers essential for classification and correct outcome prediction. ](./FeatureMapping.png)
 
+CINNAMON-GUI automatically generates a 'showcase' containing the top 100 predictions. This functionality helps users get an immediate, ' at a glance' outcome and appreciate the system's classification quality.
 
-
+![](./FeatureMapping.png)
+[\label{fig_3Upon toggling the "Feature Mapping" checkbox in the Model Testing Tab,  CINNAMON-GUI a series of plots illustrating activations from all CNN layers, facilitating the identification of characteristic subcellular patterns. In the image identified by CINNAMON-GUI as Koilocyte (K), evident nuclear alterations (increased nuclear/cytoplasmic ratio and hypertrophy) and signs of karyolysis are present. The feature maps displayed on the right can identify patterns that CNN considers essential for classification and correct outcome prediction. ](./FeatureMapping.png)
 # Conclusion
 
 CINNAMON-GUI significantly advances digital pathology by leveraging the power of convolutional neural networks (CNNs) to classify Pap smear images. Its open-source nature promotes transparency, collaboration, and continuous innovation within the scientific community. The tool's integration with the SipakMed database and its sophisticated feature mapping capabilities make the identification of pathological traits more accessible and accurate. By democratizing access to advanced analytical tools, CINNAMON-GUI stands to enhance medical diagnostics and research globally, making impactful contributions to public health.
