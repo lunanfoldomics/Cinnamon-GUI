@@ -46,6 +46,11 @@ the tool to their specific needs. Additionally, they can manipulate
 training epochs, batch size, and two regularization parameters 
 to enhance the training performances.  \label{fig_1} ](Training_Tab.png)
 
+![Definition of a simple reaction-diffusion system implementing an
+association reaction over 3 cells using the JSON/dictionary format.
+The rates used were: $k_+ = 1$ M$^{-1}$s$^{-1}$, $k_-= 1$ s$^{-1}$. \label{jsonsyntax} ](jsonsyntax.png)
+
+
 
 The software provides real-time updates on training progress, displayed through a progress bar and detailed logs within a dedicated output window. This not only keeps the user informed but also aids in diagnosing any issues during the training phase.
 Visualization tools are a standout feature, offering insights into CNN's operations. Users can generate plots to visualize learning curves, illustrating the training and validation losses and accuracies over time. Moreover, the software can display feature maps from different CNN layers, providing a deeper understanding of how the model processes and interprets the input images.
