@@ -40,7 +40,7 @@ Training and validation of models are central aspects of CINNAMON-GUI, featuring
 
 <img src="Training_Tab.png" style="display:block; margin:auto; width:800px; height:auto;">
 
-[Figure 1. With the Cinnamon-GUI Training Tab, users have full control over the adjustments of the CNN architecture. They can fine-tune the filters, the number of neurons, and activation functions, thereby customizing the tool to their specific needs. Additionally, they can manipulate training epochs, batch size, and two regularization parameters to enhance the training performances./Training_Tab.png)]
+![\label{fig_1}With the Cinnamon-GUI Training Tab, users have full control over the adjustments of the CNN architecture. They can fine-tune the filters, the number of neurons, and activation functions, thereby customizing the tool to their specific needs. Additionally, they can manipulate training epochs, batch size, and two regularization parameters to enhance the training performances.](./Training_Tab.png)
 
 The software provides real-time updates on training progress, displayed through a progress bar and detailed logs within a dedicated output window. This not only keeps the user informed but also aids in diagnosing any issues during the training phase.
 Visualization tools are a standout feature, offering insights into CNN's operations. Users can generate plots to visualize learning curves, illustrating the training and validation losses and accuracies over time. Moreover, the software can display feature maps from different CNN layers, providing a deeper understanding of how the model processes and interprets the input images.
