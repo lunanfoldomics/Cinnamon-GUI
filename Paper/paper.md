@@ -39,6 +39,7 @@ The software supports loading datasets from `.pickle` files, which conveniently 
 Training and validation of models are central aspects of CINNAMON-GUI, featuring a user-friendly interface that facilitates the specification of training parameters such as epochs and batch sizes  \autoref{fig_1}. 
 
 <img src="Training_Tab.png" style="display:block; margin:auto; width:800px; height:auto;">
+
 [\label{fig_1}With the Cinnamon-GUI Training Tab, users have full control over the adjustments of the CNN architecture. They can fine-tune the filters, the number of neurons, and activation functions, thereby customizing the tool to their specific needs. Additionally, they can manipulate training epochs, batch size, and two regularization parameters to enhance the training performances.](./Training_Tab.png)
 
 
