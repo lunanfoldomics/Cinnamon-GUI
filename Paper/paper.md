@@ -45,10 +45,10 @@ Training and validation of models are central aspects of CINNAMON-GUI, featuring
 The software provides real-time updates on training progress, displayed through a progress bar and detailed logs within a dedicated output window. This not only keeps the user informed but also aids in diagnosing any issues during the training phase.
 Visualization tools are a standout feature, offering insights into CNN's operations. Users can generate plots to visualize learning curves, illustrating the training and validation losses and accuracies over time. Moreover, the software can display feature maps from different CNN layers, providing a deeper understanding of how the model processes and interprets the input images.
 Model management is handled efficiently, with options to save trained models and their configurations for future use or to load pre-existing models. This functionality ensures that valuable models are preserved and easily shared within the scientific community, promoting reproducibility and collaborative improvements.
-CINNAMON-GUI also extends its functionality by integrating external tools such as Labelme directly within the interface.
+CINNAMON-GUI also extends its functionality by integrating external tools such as Labelme directly within the interface (\ref{fig_2}.)
 
 ![](./ROIs_with_Labelme.png)
-[\label{fig_1}CINNAMON-GUI can call the Labelme program to generate Regions of Interest (ROI) and manually select cells from an imported Pap smear file. This option allows for the generation of datasets that can be analyzed and classified.](./ROIs_with_Labelme.png)
+[\label{fig_2}CINNAMON-GUI can call the Labelme program to generate Regions of Interest (ROI) and manually select cells from an imported Pap smear file. This option allows for the generation of datasets that can be analyzed and classified.](./ROIs_with_Labelme.png)
 
 This integration enables users to define regions of interest on images for more focused analysis, highlighting the tool's commitment to providing a comprehensive suite for digital pathology 
 analysis. This integration not only enhances the tool's versatility but also streamlines the analysis process, making it more efficient for the user.
@@ -75,14 +75,18 @@ Table 1 illustrates the architecture implemented for classifying the SIPaKMeD da
 
 Table 1. Detailed Architecture of CINNAMON-GUI.
 
-With this architecture, the CNN achieved a training accuracy of 93% on the validation test after 30 epochs of learning, with both regularization parameters set to 0.001 and an F1-Score of 0.98. (\ref{fig_2}.)
+With this architecture, the CNN achieved a training accuracy of 93% on the validation test after 30 epochs of learning, with both regularization parameters set to 0.001 and an F1-Score of 0.98. (\ref{fig_3}.)
 ![](./LearningCurves.png)
-[\label{fig_2} The accuracy plot after training. Blue and green curves correspond to respectively training and testing accuracy reached after 30 epochs. Yellow and red curves correspond to respectively training and testing loss.](./LearningCurves.png)
+[\label{fig_3} The accuracy plot after training. Blue and green curves correspond to respectively training and testing accuracy reached after 30 epochs. Yellow and red curves correspond to respectively training and testing loss.](./LearningCurves.png)
 
 Additionally, a custom cross-validation test using RepeatedKFold was implemented through Scikit-Learn and executed with a 15-fold validation, reaching an accuracy of 99% (std =0.0 ).
 The Feature Mapping function of CINNAMON-GUI can be handy for identifying Koilocytes, which are prodromal cells of a transformation into Dyskeratocytes. Koilocytes are squamous cells that exhibit morphological alterations indicative of human papillomavirus (HPV) infection. Koilocytosis is pathognomonic, though not required, for diagnosing low-grade squamous intraepithelial lesions (LSIL). 
 The main morphological alterations observed in koilocytosis include Karyolysis (chromatin within the nucleus appears fragmented and dispersed, giving the nucleus a translucent or granular appearance) @Walker1994Endonuclease. Other specific alterations inlcude: nuclear hypertrophy (the nucleus is more significant than usual and may exhibit increased chromatin density) @Iglesias-Guimarais2013Chromatin, increased nuclear/cytoplasmic ratio (the nucleus occupies a more significant proportion of the cellular space compared to the cytoplasm), clear perinuclear zone (a clear zone is observed around the nucleus, known as the "clear perinuclear zone") @Zierler2006Ultraviolet and cytoplasmic vacuolization (the cytoplasm may show alterations such as the presence of vacuoles, giving the cell a sponge-like appearance), @Errami2012Apoptotic, and @Burton2003A.
-The CINNAMON-GUI Feature mapping algorithm, which involves mapping the various layers of the CNN through our software, makes identifying these pathological traits much more accessible, enhancing the accuracy and reliability of medical diagnoses. This feature can be enabled via a checkbox located within the Testing Tab.
+The CINNAMON-GUI Feature mapping algorithm, which involves mapping the various layers of the CNN through our software, makes identifying these pathological traits much more accessible, enhancing the accuracy and reliability of medical diagnoses. This feature can be enabled via a checkbox located within the Testing Tab. (\ref{fig_4}.)
+
+![](./FeatureMapping_1.png)
+[\label{fig_3} The accuracy plot after training. Blue and green curves correspond to respectively training and testing accuracy reached after 30 epochs. Yellow and red curves correspond to respectively training and testing loss.](./FeatureMapping_1.png)
+
 
 
 # Conclusion
