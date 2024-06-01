@@ -31,7 +31,6 @@ import os
 import shutil
 import re
 from contextlib import redirect_stdout
-from tqdm.notebook import tqdm  # Importa tqdm per la barra di avanzamento
 from datetime import datetime
 import pickle
 #from IPython.core.display import display, HTML
@@ -665,7 +664,6 @@ def on_button_click_Train_Model(b):
         summary_text = buffer.getvalue()
         print_message(summary_text)
 
-        # Avviare il training del modello con la barra di avanzamento tqdm
         print_message("Training...")    
 
         history = History()  # Crea un oggetto History per registrare la storia dell'addestramento
