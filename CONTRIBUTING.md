@@ -34,7 +34,7 @@ CINNAMON-GUI is an open-source tool for classifying biomedical images in digital
 
 ## Communication
 
-- **Discussion forum:** Use the forum (TO DO) for general questions or project discussions.
+- **Discussion forum:** Use our forum ([TO DO](https://github.com/lunanfoldomics/Cinnamon-GUI/discussions/1)) for general questions or project discussions.
 - **Chat channel:** Join our chat channel on (platform name, e.g., Slack, Discord) for real-time discussions.
 
 ## Acknowledgements
