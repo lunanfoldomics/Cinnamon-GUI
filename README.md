@@ -28,6 +28,12 @@ For more information, visit our website: [Lunan Foldomics LLC](http://www.lunanf
 
 Cinnamon-GUI is an application that leverages the convenience of interactive widgets in Jupyter to classify Digital Pathology images. It makes it effortless to load datasets, train Convolutional Neural Network (CNN) models, and test these models on images.
 
+The general CINNAMON-GUI architecture can be described as following:
+
+<img src="/Images/CNN.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
+
+But it can be modified by the user depending on the type of input and according to needs.
+
 The general structure of the application is as follows:
 
 1. Tab for dataset loading: Allows loading a dataset of images in pickle format.
