@@ -256,7 +256,16 @@ plt.show()
 
 ## Additional Files
 The file "classes.tsv" contains pathological classes associated with the labels. It is pivotal for displaying the results.
-To complete
+
+| Class | Label |
+|-------|-------|
+| D     | 0     |
+| K     | 1     |
+| M     | 2     |
+| P     | 3     |
+| SI    | 4     |
+
+The classes have been abbreviated to letters to make the various grades and output tables more readable. They correspond respectively to the five classes 'Discheratotic', 'Koilocytes', 'Metaplastic', 'Parabasal', and 'Superficial-Intermediate', as reported in the SIPAKMED dataset.
 
 ### Documentation
 For detailed documentation, including usage examples and configuration, please refer to the `docs` directory included with the software or visit our [documentation page](http://www.lunanfoldomicsllc.com/documentation).
