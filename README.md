@@ -266,6 +266,7 @@ The file "classes.tsv" contains pathological classes associated with the labels.
 | SI    | 4     |
 
 The classes have been abbreviated to letters to make the various output more readable. They correspond respectively to the five classes 'Discheratotic', 'Koilocytes', 'Metaplastic', 'Parabasal', and 'Superficial-Intermediate', as reported in the SIPAKMED dataset.
+When generating your dataset.pickle, always ensure that a classes.tsv file accompanies your dataset and is located in the same directory as the pickle file. Additionally, make sure that both files share the same name. For example, if you decide to name your dataset.pickle 256X256.pickle, ensure that its accompanying classes file is named 256X256.classes.tsv
 
 ### Documentation
 For detailed documentation, including usage examples and configuration, please refer to the `docs` directory included with the software or visit our [documentation page](http://www.lunanfoldomicsllc.com/documentation).
