@@ -265,7 +265,7 @@ The file "classes.tsv" contains pathological classes associated with the labels.
 | P     | 3     |
 | SI    | 4     |
 
-The classes have been abbreviated to letters to make the various output tables more readable. They correspond respectively to the five classes 'Discheratotic', 'Koilocytes', 'Metaplastic', 'Parabasal', and 'Superficial-Intermediate', as reported in the SIPAKMED dataset.
+The classes have been abbreviated to letters to make the various output more readable. They correspond respectively to the five classes 'Discheratotic', 'Koilocytes', 'Metaplastic', 'Parabasal', and 'Superficial-Intermediate', as reported in the SIPAKMED dataset.
 
 ### Documentation
 For detailed documentation, including usage examples and configuration, please refer to the `docs` directory included with the software or visit our [documentation page](http://www.lunanfoldomicsllc.com/documentation).
