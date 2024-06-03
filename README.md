@@ -254,7 +254,7 @@ plt.show()
 ```
 
 
-## Additional Files
+## The classes.tsv file
 The file "classes.tsv" contains pathological classes associated with the labels. It is pivotal for displaying the results.
 
 | Class | Label |
