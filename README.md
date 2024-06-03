@@ -265,8 +265,11 @@ The file "classes.tsv" contains pathological classes associated with the labels.
 | P     | 3     |
 | SI    | 4     |
 
-The classes have been abbreviated to letters to make the various output more readable. They correspond respectively to the five classes 'Discheratotic', 'Koilocytes', 'Metaplastic', 'Parabasal', and 'Superficial-Intermediate', as reported in the SIPAKMED dataset.
-When generating your dataset.pickle, always ensure that a classes.tsv file accompanies your dataset and is located in the same directory as the pickle file. Additionally, make sure that both files share the same name. For example, if you decide to name your dataset.pickle 256X256.pickle, ensure that its accompanying classes file is named 256X256.classes.tsv
+The classes.tsv file associates numerical labels with more intuitive literal characters. 
+There are no predefined rules for generating class names, but using only a short class name is a good practice. Using letters with at most two characters to define a label is better. Remember to start with the label with a zero value when defining the first class, as we are in a Python system, and we know that Python always starts from zero and never from one!
+The classes have been abbreviated to letters to make the various output more readable. They correspond respectively to the five classes 'Discheratotic,' 'Koilocytes,' 'Metaplastic,' 'Parabasal,' and 'Superficial-Intermediate,' as reported in the SIPAKMED dataset.
+Generating your dataset.pickle and classes. tsv files is a straightforward process. Always ensure that a classes.tsv file accompanies your dataset and is located in the same directory as the pickle file. Additionally, make sure that both files share the same name. For example, if you decide to name your dataset.pickle 256X256.pickle, ensure that its accompanying classes file is named 256X256.classes.tsv
+
 
 ### Documentation
 For detailed documentation, including usage examples and configuration, please refer to the `docs` directory included with the software or visit our [documentation page](http://www.lunanfoldomicsllc.com/documentation).
