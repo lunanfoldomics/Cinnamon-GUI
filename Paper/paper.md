@@ -13,7 +13,7 @@ authors:
   - orcid: 0000-0002-4348-6341
 
 affiliations:
-  - name: Lunan Foldomics LLC, Houston, TX, United States of America
+  - name: Lunan Foldomics LLC Houston TX 77057 USA
     index: 1
 date: May, 30 2024
 bibliography: paper.bib
