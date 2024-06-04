@@ -14,7 +14,7 @@ authors:
   - affiliation: 1
 
 affiliations:
-  - name: Lunan Foldomics LLC Houston TX 77057 USA
+  - name: Lunan Foldomics LLC, Houston, TX 77057, United States of America
     index: 1
 date: May, 30 2024
 bibliography: paper.bib
