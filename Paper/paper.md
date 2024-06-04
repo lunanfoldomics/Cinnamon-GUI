@@ -17,6 +17,7 @@ affiliations:
     index: 1
 date: May, 30 2024
 bibliography: paper.bib
+license: GPL-3.0-only
 ---
 
 # Summary
@@ -25,6 +26,11 @@ Cervical cancer is a significant cause of death for women worldwide. In 2020, th
 The Pap test, also known as the Papanicolaou test, is a widely used screening test for the prevention and early detection of cervical cancer. It involves examining cells collected from the cervix's surface to identify any abnormal cellular changes indicative of potential cancer or precancerous lesions (@PAPANICOLAOU1941193).
 However, interpreting Pap test results can be subjective and reliant on the operator's expertise. Additionally, the test's accuracy can be affected by various factors, including sample quality and the presence of dyskeratotic cells, which can be challenging to interpret (@Walavalkar201421346). 
 In this paper, we present CINNAMON-GUI (Convolutional Neural Network and Multimodal Learning with a Graphic User Interface), an open-source tool that allows users to configure sophisticated CNN architectures for classifying digital biomedical images from the cervical Pap smear dataset SIPaKMeD (@PLISSITI20188451588).
+
+
+# License
+
+This software is licensed under the GNU General Public License v3.0 (GPL-3.0). The full text of the license can be found in the LICENSE file in the root directory of the repository.
 
 # Statement of Need
 
