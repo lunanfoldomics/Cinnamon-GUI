@@ -10,8 +10,8 @@ tags:
   - Image Processing
 authors:
   - name: Luca Zammataro
-  - orcid: 0000-0002-4348-6341
-  - affiliation: 1
+    orcid: 0000-0002-4348-6341
+    affiliation: 1
 affiliations:
   - name: Lunan Foldomics LLC, Houston, TX 77057, United States of America
     index: 1
