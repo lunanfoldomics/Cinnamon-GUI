@@ -4,6 +4,9 @@
 
 ## Version 0.4.0
 # SPDX-License-Identifier: GPL-3.0-only
+## License
+
+This project is licensed under the terms of the GNU General Public License v3.0 (GPL-3.0-only). See the LICENSE file in the root directory of the repository for details.
 
 ### Convolutional Neural Network And Multimodal Learning with Graphic User Interface for Digital Pathology
 
