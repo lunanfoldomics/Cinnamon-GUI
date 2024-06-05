@@ -3,6 +3,7 @@
 # CINNAMON-GUI
 
 ## Version 0.4.0
+# SPDX-License-Identifier: GPL-3.0-only
 
 ### Convolutional Neural Network And Multimodal Learning with Graphic User Interface for Digital Pathology
 
