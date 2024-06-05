@@ -1,14 +1,12 @@
 <img src="Cinnamon-Gui-Logo.png" alt="logo" style="display:block; margin:auto; width:200px; height:auto;">
 
 # CINNAMON-GUI
-
+### Convolutional Neural Network And Multimodal Learning with Graphic User Interface for Digital Pathology
 ## Version 0.4.0
 # SPDX-License-Identifier: GPL-3.0-only
 ## License
 
 This project is licensed under the terms of the GNU General Public License v3.0 (GPL-3.0-only). See the LICENSE file in the root directory of the repository for details.
-
-### Convolutional Neural Network And Multimodal Learning with Graphic User Interface for Digital Pathology
 
 CINNAMON-GUI is an advanced digital pathology tool that leverages the power of convolutional neural networks (CNN) and multimodal learning to provide an intuitive graphical user interface for research professionals. This tool is designed to enhance the analysis and interpretation of pathological samples, making it easier to study various diseases.
 
