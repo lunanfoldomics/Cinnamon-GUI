@@ -17,7 +17,7 @@ affiliations:
     index: 1
 date: May, 30 2024
 bibliography: paper.bib
-license: GPL-3.0-only
+license: AGPL-3.0-only
 ---
 
 # Summary
