@@ -6,7 +6,7 @@
 # SPDX-License-Identifier: AGPL-3.0-only
 ## License
 
-This project is licensed under the terms of the GNU General Public License v3.0 (GPL-3.0-only). See the LICENSE file in the root directory of the repository for details.
+This project is licensed under the terms of the GNU Affero General Public License version 3. See the LICENSE file in the root directory of the repository for details.
 
 CINNAMON-GUI is an advanced digital pathology tool that leverages the power of convolutional neural networks (CNN) and multimodal learning to provide an intuitive graphical user interface for research professionals. This tool is designed to enhance the analysis and interpretation of pathological samples, making it easier to study various diseases.
 
