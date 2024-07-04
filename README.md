@@ -55,17 +55,28 @@ conda create -n cinnamongui python=3.9
 conda activate cinnamongui  # On Windows
 source activate cinnamongui  # On macOS and Linux
 
-# Install the required packages
-shiny==0.2.4
-pandas==2.0.3
-numpy==1.24.4
-tensorflow==2.9.1
-Pillow==9.1.0
-matplotlib==3.5.2
-scikit-learn==1.2.2
-datetime==4.3
-jsonlib-python3==1.6.1
+# To install the necessary packages for Cinnamon-GUI, you can create a requirements.txt file with the following content. This file lists all the dependencies that need to be installed:
+shiny
+os
+io
+re
+shutil
+pandas
+numpy
+json
+tensorflow
+Pillow
+matplotlib
+scikit-learn
+datetime
+pickle
+base64
+tempfile
+asyncio
 labelme
+
+# You can install these dependencies by running:
+pip install -r requirements.txt
 
 # Deactivate the virtual environment
 conda deactivate  # On Windows
