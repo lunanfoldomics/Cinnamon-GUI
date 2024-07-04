@@ -92,7 +92,7 @@ conda deactivate  # On Windows
 source deactivate  # On macOS and Linux
 ```
 
-Running Cinnamon-Gui
+## Running Cinnamon-Gui
 ```bash
 cd dashboard-tips
 python cinnamon-gui.py
