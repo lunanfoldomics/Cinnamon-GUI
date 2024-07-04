@@ -1,0 +1,147 @@
+2024-07-04 00:06:22.718955: Log initialized
+2024-07-04 00:06:22.723745: Cinnamon-GUI v0.4.1 started.
+2024-07-04 00:06:22.727483: Classes file is None
+2024-07-04 00:06:34.737349: Loading dataset...
+2024-07-04 00:06:35.585441: Dataset loaded.
+2024-07-04 00:06:35.586192: Dataset name: 010.specimen.256X256.pickle
+2024-07-04 00:06:35.586540: Dataset size: 8063550
+2024-07-04 00:06:35.586884: Dataset type: application/octet-stream
+2024-07-04 00:06:35.587389: Dataset datapath: /var/folders/hb/fqnfqpt91n57lb9mkstlpr8w1dtynt/T/fileupload-0ufm3rvz/tmp_rrugsly/0.pickle
+2024-07-04 00:06:35.587951: Dataset info: 41 items; Image size: 256x256 px
+2024-07-04 00:06:49.977458: Model: "sequential_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d_4 (Conv2D)           (None, 254, 254, 32)      896       
+                                                                 
+ batch_normalization_4 (Batc  (None, 254, 254, 32)     128       
+ hNormalization)                                                 
+                                                                 
+ max_pooling2d_4 (MaxPooling  (None, 127, 127, 32)     0         
+ 2D)                                                             
+                                                                 
+ conv2d_5 (Conv2D)           (None, 125, 125, 64)      18496     
+                                                                 
+ batch_normalization_5 (Batc  (None, 125, 125, 64)     256       
+ hNormalization)                                                 
+                                                                 
+ max_pooling2d_5 (MaxPooling  (None, 62, 62, 64)       0         
+ 2D)                                                             
+                                                                 
+ conv2d_6 (Conv2D)           (None, 60, 60, 128)       73856     
+                                                                 
+ batch_normalization_6 (Batc  (None, 60, 60, 128)      512       
+ hNormalization)                                                 
+                                                                 
+ max_pooling2d_6 (MaxPooling  (None, 30, 30, 128)      0         
+ 2D)                                                             
+                                                                 
+ conv2d_7 (Conv2D)           (None, 28, 28, 256)       295168    
+                                                                 
+ batch_normalization_7 (Batc  (None, 28, 28, 256)      1024      
+ hNormalization)                                                 
+                                                                 
+ max_pooling2d_7 (MaxPooling  (None, 14, 14, 256)      0         
+ 2D)                                                             
+                                                                 
+ flatten_1 (Flatten)         (None, 50176)             0         
+                                                                 
+ dense_2 (Dense)             (None, 256)               12845312  
+                                                                 
+ dropout_1 (Dropout)         (None, 256)               0         
+                                                                 
+ dense_3 (Dense)             (None, 5)                 1285      
+                                                                 
+=================================================================
+Total params: 13,236,933
+Trainable params: 13,235,973
+Non-trainable params: 960
+_________________________________________________________________
+
+2024-07-04 00:06:49.985227: Model loaded.
+2024-07-04 00:06:59.192370: Classes loaded: ['Dyskeratocytes', 'Koilocytes', 'Metaplastic Cells', 'Parabasal Cells', 'Superficial-Intermediate Cells']
+2024-07-04 00:07:05.714487: Report:                                                          Class  Predicted Count
+Dyskeratocytes                                  Dyskeratocytes                2
+Koilocytes                                          Koilocytes               37
+Metaplastic Cells                            Metaplastic Cells                0
+Parabasal Cells                                Parabasal Cells                0
+Superficial-Intermediate Cells  Superficial-Intermediate Cells                2
+2024-07-04 00:08:36.849669: Loading dataset...
+2024-07-04 00:10:25.450458: Dataset loaded.
+2024-07-04 00:10:25.452283: Dataset name: cervix.original.dataset.256X256.pickle
+2024-07-04 00:10:25.452773: Dataset size: 795265532
+2024-07-04 00:10:25.453864: Dataset type: application/octet-stream
+2024-07-04 00:10:25.454496: Dataset datapath: /var/folders/hb/fqnfqpt91n57lb9mkstlpr8w1dtynt/T/fileupload-0ufm3rvz/tmpha4qr8_a/0.pickle
+2024-07-04 00:10:25.455368: Dataset info: 4044 items; Image size: 256x256 px
+2024-07-04 00:11:14.412058: Training started.
+2024-07-04 00:11:14.412462: seed: 7272959
+2024-07-04 00:11:14.412752: total epochs: 30
+2024-07-04 00:11:14.413034: test size: 0.2
+2024-07-04 00:11:14.413320: batch size: 32
+2024-07-04 00:11:14.413802: training dataset size: 3235 items; Image size: 256x256 px
+2024-07-04 00:11:14.414066: testing dataset size: 809 items; Image size: 256x256 px
+2024-07-04 00:11:14.414568: rotation_range: 9
+2024-07-04 00:11:14.415056: width_shift_range: 0.2
+2024-07-04 00:11:14.415351: height_shift_range: 0.2
+2024-07-04 00:11:14.415747: shear_range: 0.2
+2024-07-04 00:11:14.416068: zoom_range: 0.2
+2024-07-04 00:11:14.416385: horizontal_flip: True
+2024-07-04 00:11:14.416745: vertical_flip: False
+2024-07-04 00:11:14.417075: fill_mode: nearest
+2024-07-04 00:11:14.417384: cval: 255
+2024-07-04 00:11:14.417687: regularization params: (0.001, 0.001)
+2024-07-04 00:11:14.418047: dropout_value: 0.5
+2024-07-04 00:11:14.418418: optimizer: Adam
+2024-07-04 00:11:14.418799: loss: categorical_crossentropy
+2024-07-04 00:11:14.419159: learning_rate: 0.0001
+2024-07-04 00:11:14.419673: Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 254, 254, 32)      896       
+                                                                 
+ batch_normalization (BatchN  (None, 254, 254, 32)     128       
+ ormalization)                                                   
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 127, 127, 32)     0         
+ )                                                               
+                                                                 
+ conv2d_1 (Conv2D)           (None, 125, 125, 64)      18496     
+                                                                 
+ batch_normalization_1 (Batc  (None, 125, 125, 64)     256       
+ hNormalization)                                                 
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 62, 62, 64)       0         
+ 2D)                                                             
+                                                                 
+ conv2d_2 (Conv2D)           (None, 60, 60, 128)       73856     
+                                                                 
+ batch_normalization_2 (Batc  (None, 60, 60, 128)      512       
+ hNormalization)                                                 
+                                                                 
+ max_pooling2d_2 (MaxPooling  (None, 30, 30, 128)      0         
+ 2D)                                                             
+                                                                 
+ conv2d_3 (Conv2D)           (None, 28, 28, 256)       295168    
+                                                                 
+ batch_normalization_3 (Batc  (None, 28, 28, 256)      1024      
+ hNormalization)                                                 
+                                                                 
+ max_pooling2d_3 (MaxPooling  (None, 14, 14, 256)      0         
+ 2D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 50176)             0         
+                                                                 
+ dense (Dense)               (None, 256)               12845312  
+                                                                 
+ dropout (Dropout)           (None, 256)               0         
+                                                                 
+ dense_1 (Dense)             (None, 5)                 1285      
+                                                                 
+=================================================================
+Total params: 13,236,933
+Trainable params: 13,235,973
+Non-trainable params: 960
+_________________________________________________________________
+
+2024-07-04 00:11:14.420103: Training in progress...
