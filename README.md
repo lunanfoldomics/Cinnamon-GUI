@@ -41,7 +41,7 @@ The general structure of the application is as follows:
 4. Tab for model testing: This tab contains a widget for selecting an image from the dataset and displaying the model's prediction. It also allows you to display feature maps from various layers of the CNN.
 5. Tab for learning plot visualization: Displays the model's training progress plot over time.
 
-Cinnamon-GUI has undergone rigorous testing in MacOS environments for M1 processors with Jupyter Notebook, Jupyter-Lab and in a Google Colab environment. 
+Cinnamon-GUI has undergone rigorous testing in MacOS environments for M1 processors.
 
 ## Virtual Environment
 
@@ -90,6 +90,12 @@ Deactivate the virtual environment
 ```bash
 conda deactivate  # On Windows
 source deactivate  # On macOS and Linux
+```
+
+Running Cinnamon-Gui
+```bash
+cd dashboard-tips
+python cinnamon-gui.py
 ```
 
 ## Dataset
