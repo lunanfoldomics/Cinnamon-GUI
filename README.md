@@ -3,15 +3,8 @@
 # CINNAMON-GUI
 ### Convolutional Neural Network And Multimodal Learning with Graphic User Interface for Digital Pathology
 ## Version 0.4.1
-# SPDX-License-Identifier: AGPL-3.0-only
 
 CINNAMON-GUI is an advanced digital pathology tool that leverages the power of convolutional neural networks (CNN) and multimodal learning to provide an intuitive graphical user interface for research professionals. This tool is designed to enhance the analysis and interpretation of pathological samples, making it easier to study various diseases.
-
-#### Developed by Lunan Foldomics LLC, Copyright (C) 2024
-
-Disclaimer: the software use is intended ONLY for experimental purposes, not for clinical.
-
-For more information, visit our website: [Lunan Foldomics LLC](http://www.lunanfoldomicsllc.com/)
 
 ### Features
 - **Advanced CNN Models**: Utilize state-of-the-art convolutional neural networks optimized for digital pathology.
@@ -220,13 +213,13 @@ plt.show()
 ## The classes.tsv file
 The file "classes.tsv" contains pathological classes associated with the labels. It is pivotal for displaying the results.
 
-| Class | Label |
-|-------|-------|
-| D     | 0     |
-| K     | 1     |
-| M     | 2     |
-| P     | 3     |
-| SI    | 4     |
+| Class                     | Label |
+|---------------------------|-------|
+| Dyskeratocytes            | 0     |
+| Koilocytes                | 1     |
+| Metaplastic Cells         | 2     |
+| Parabasal Cells           | 3     |
+| Superficial-Intermediate Cells | 4     |
 
 The classes.tsv file associates numerical labels with more intuitive literal characters. 
 There are no predefined rules for generating class names, but using only a short class name is a good practice. Using letters with at most two characters to define a label is better. Remember to start with the label with a zero value when defining the first class, as we are in a Python system, and we know that Python always starts from zero and never from one!
@@ -241,7 +234,14 @@ For detailed documentation, including usage examples and configuration, please r
 We welcome contributions from the community. If you are interested in contributing to CINNAMON-GUI, please read our `CONTRIBUTING.md` file for guidelines on how to get started.
 
 ## License
+# SPDX-License-Identifier: AGPL-3.0-only
 This project is licensed under the terms of the GNU Affero General Public License version 3. See the LICENSE file in the root directory of the repository for details.
+
+#### Developed by Lunan Foldomics LLC, Copyright (C) 2024
+
+Disclaimer: the software use is intended ONLY for experimental purposes, not for clinical.
+
+For more information, visit our website: [Lunan Foldomics LLC](http://www.lunanfoldomicsllc.com/)
 
 ### Contact
 For support or inquiries, please contact us via email at [lucazammataro@lunanfoldomicsllc.com](mailto:lucazammataro@lunanfoldomicsllc.com) or  at [info@lunanfoldomicsllc.com](mailto:info@lunanfoldomicsllc.com) or visit the contact page on our website.
@@ -250,3 +250,4 @@ For support or inquiries, please contact us via email at [lucazammataro@lunanfol
 Stay connected with updates and news:
 - [Twitter](http://twitter.com/LunanFoldomics)
 - [LinkedIn](http://linkedin.com/company/lunan-foldomics-llc)
+  
