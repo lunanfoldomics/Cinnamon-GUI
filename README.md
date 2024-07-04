@@ -47,13 +47,13 @@ Cinnamon-GUI has undergone rigorous testing in MacOS environments for M1 process
 
 To run the code, we recommend using a conda virtual environment. You can create a virtual environment named `cinnamongui` and install the required dependencies by executing the following commands:
 
-```bash
-# Create a new virtual environment named medgui-convnet
+```
+# Create a new virtual environment cinnamongui
 conda create -n cinnamongui python=3.9
 ```
 # Activate the virtual environment
 
-```bash
+```
 conda activate cinnamongui  # On Windows
 source activate cinnamongui  # On macOS and Linux
 ```
