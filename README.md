@@ -51,14 +51,15 @@ To run the code, we recommend using a conda virtual environment. You can create 
 # Create a new virtual environment cinnamongui
 conda create -n cinnamongui python=3.9
 ```
-# Activate the virtual environment
+Activate the virtual environment
 
 ```
 conda activate cinnamongui  # On Windows
 source activate cinnamongui  # On macOS and Linux
 ```
 
-# To install the necessary packages for Cinnamon-GUI, you can create a requirements.txt file with the following content. This file lists all the dependencies that need to be installed:
+To install the necessary packages for Cinnamon-GUI, you can create a requirements.txt file with the following content. This file lists all the dependencies that need to be installed:
+
 ```bash
 shiny
 os
@@ -79,12 +80,13 @@ tempfile
 asyncio
 labelme
 ```
-# You can install these dependencies by running:
+
+You can install these dependencies by running:
 ```bash
 pip install -r requirements.txt
 ```
 
-# Deactivate the virtual environment
+Deactivate the virtual environment
 ```bash
 conda deactivate  # On Windows
 source deactivate  # On macOS and Linux
