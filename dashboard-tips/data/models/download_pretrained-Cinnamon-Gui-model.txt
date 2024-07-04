@@ -1,1 +1,2 @@
-
+Download a pre-trained model from:
+https://www.kaggle.com/datasets/lucazammataro/cinnamon-gui-for-sipakmed-95-accuracy
