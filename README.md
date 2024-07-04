@@ -24,7 +24,7 @@ For more information, visit our website: [Lunan Foldomics LLC](http://www.lunanf
 2. Follow the installation guide provided in this `README.md` document to set up the software on your system.
 
 
-## Cinnamon-GUI: Now a Shiny App in Python
+## Cinnamon-GUI: Now a Shiny App in Python (July 2024)
 Cinnamon-GUI has evolved from its initial implementation with ipywidgets for Jupyter Lab and Notebook to a fully-fledged Shiny app in Python. This transition brings several advantages, notably an enhanced user interface and improved interactivity. The Shiny framework allows for dynamic and responsive web applications, making it more straightforward for users to interact with machine learning models and visualize results in real time. This update ensures that Cinnamon-GUI remains at the forefront of digital pathology tools, providing a more robust and user-friendly experience for researchers and clinicians.
 
 The general CINNAMON-GUI architecture can be described as following:
@@ -56,15 +56,16 @@ conda activate cinnamongui  # On Windows
 source activate cinnamongui  # On macOS and Linux
 
 # Install the required packages
-pip install numpy==1.23.2
-pip install pandas==1.5.3
-pip install keras==2.11.0
-pip install tensorflow-estimator==2.11.0
-pip install tensorflow-macos==2.11.0
-pip install tensorflow-metal==0.7.1
-pip install matplotlib==3.7.1
-pip install scikit-learn==1.2.2
-pip install labelme
+shiny==0.2.4
+pandas==2.0.3
+numpy==1.24.4
+tensorflow==2.9.1
+Pillow==9.1.0
+matplotlib==3.5.2
+scikit-learn==1.2.2
+datetime==4.3
+jsonlib-python3==1.6.1
+labelme
 
 # Deactivate the virtual environment
 conda deactivate  # On Windows
