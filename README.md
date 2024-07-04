@@ -50,12 +50,16 @@ To run the code, we recommend using a conda virtual environment. You can create 
 ```bash
 # Create a new virtual environment named medgui-convnet
 conda create -n cinnamongui python=3.9
-
+```
 # Activate the virtual environment
+
+```bash
 conda activate cinnamongui  # On Windows
 source activate cinnamongui  # On macOS and Linux
+```
 
 # To install the necessary packages for Cinnamon-GUI, you can create a requirements.txt file with the following content. This file lists all the dependencies that need to be installed:
+```bash
 shiny
 os
 io
@@ -74,14 +78,16 @@ base64
 tempfile
 asyncio
 labelme
-
+```
 # You can install these dependencies by running:
+```bash
 pip install -r requirements.txt
+```
 
 # Deactivate the virtual environment
+```bash
 conda deactivate  # On Windows
 source deactivate  # On macOS and Linux
-
 ```
 
 ## Dataset
@@ -91,6 +97,7 @@ Download Link: https://www.cs.uoi.gr/~marina/sipakmed.html
 
 Once the SipakMed dataset is downloaded, it needs to be unzipped into a directory, which we might call "sipakmed." The main directory structure of SipakMed is not particularly complex, but it is essential to understand where the images are located within the five cellular categories to correctly construct the pickle file. Therefore, a script must be generated to search for images within the sipakmed directory and generate the pickle file. Here is an example of how this can be done:
 Upload all the necessary Python libraries
+
 ```
 # routine for converting Bmp to a Pickle Dataset
 
