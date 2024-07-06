@@ -1,3 +1,9 @@
+'''
+CINNAMON-GUI
+Convolutional Neural Network And Multimodal Learning with Graphic User Interface for Digital Pathology
+Lunan Foldomics, Copyright(c) 2024
+'''
+
 import subprocess
 from shiny import App, ui, reactive, render
 import os
