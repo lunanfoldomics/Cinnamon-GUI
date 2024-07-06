@@ -22,7 +22,7 @@ Cinnamon-GUI has evolved from its initial implementation with ipywidgets for Jup
 
 The general CINNAMON-GUI architecture can be described as following:
 
-<img src="/Images/CNN.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
+<img src="/Images/Training_4.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
 
 But it can be modified by the user depending on the type of input and according to needs.
 
