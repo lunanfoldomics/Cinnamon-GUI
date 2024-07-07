@@ -9,21 +9,21 @@ Cinnamon-GUI has evolved from its initial implementation with ipywidgets for Jup
 The user interface, built with Shiny components, provides a responsive and interactive experience. Images and plots are generated dynamically using base64 encoding, ensuring efficient memory usage and performance.
 
 
-### Key Features
+## Key Features
 - **Advanced CNN Models**: Utilize state-of-the-art convolutional neural networks optimized for digital pathology.
 - **Multimodal Learning Capabilities**: Cinnamon-Gui is predispoded for integrating multiple types of data to improve analysis accuracy (only for research purpose).
 - **User-Friendly Interface with Dynamic UI Components**: Simplify the workflow with an intuitive GUI, designed for professionals without technical expertise. The user interface is built using Shiny components, providing a responsive and interactive experience.
 - **Image and Plot Display**: The application dynamically generates and displays images and plots using base64 encoding, ensuring efficient memory usage and performance.
 - **Scalable Solutions**: Suitable for individual researchers and large organizations.
 
-### Detailed Workflow
+## Detailed Workflow
 
-## Initialization and Logging
+### Initialization and Logging
 
 - **Log Initialization**: The application initializes a log file (`log.txt`) at startup to record all activities and messages throughout the session.
 - **Notification System**: Provides real-time notifications to users about the status and progress of various operations.
 
-## Dataset Loading and Preprocessing
+### Dataset Loading and Preprocessing
 
 - **Dataset Upload**: Users can upload a dataset in the form of a pickle file. The dataset is then loaded into memory, normalized, and reshaped for processing.
 - **Class Definitions**: Users can upload a classes file (TSV format) to define the classes used in the dataset. These classes are used for labeling and classification during model training and evaluation.
