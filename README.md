@@ -15,37 +15,39 @@ Cinnamon-GUI has evolved from its initial implementation with ipywidgets for Jup
 
 ### Key Features
 
-### Initialization and Logging
+## Initialization and Logging
 
 - **Log Initialization**: The application initializes a log file (`log.txt`) at startup to record all activities and messages throughout the session.
 - **Notification System**: Provides real-time notifications to users about the status and progress of various operations.
 
-### Dataset Loading and Preprocessing
+## Dataset Loading and Preprocessing
 
 - **Dataset Upload**: Users can upload a dataset in the form of a pickle file. The dataset is then loaded into memory, normalized, and reshaped for processing.
 - **Class Definitions**: Users can upload a classes file (TSV format) to define the classes used in the dataset. These classes are used for labeling and classification during model training and evaluation.
 
-### Model Loading and Summary
+## Model Loading and Summary
 
 - **Model Upload**: Users can upload a pre-trained model file. The application extracts the model path from the log and loads the model.
 - **Model Summary**: The loaded model's architecture is summarized and displayed in a tabular format, providing detailed information about each layer and its parameters.
 
-### Annotation Processing and Dataset Creation
+## Annotation Processing and Dataset Creation
 
 - **Labelme Integration**: The application can open Labelme for defining regions of interest (ROIs) and labeling cells in specimen images.
 - **Annotation Processing**: Users can upload an image file and its corresponding annotation file. The application processes these annotations to extract cells, classify them, and create a new dataset.
 - **In-Memory Image Handling**: All images are handled in memory using `BytesIO` and base64 encoding, ensuring that no intermediate files are saved to disk.
 
-### Model Training
+## Model Training
 
 - **Training Configuration**: Users can configure various parameters for training the model, including the seed, epochs, batch size, learning rate, and data augmentation settings.
 - **Training Process**: The application trains the model using the specified configuration. Progress is displayed in real-time, including a progress bar and status messages.
 - **Early Stopping and Learning Rate Reduction**: The training process includes callbacks for early stopping and reducing the learning rate based on validation loss.
 - **Model and Log Saving**: The trained model and log file are automatically saved to disk upon completion of training.
 
-### CNN Architectures
+## CNN Architectures
 
 Through the Training Tab, users can configure and implement various Convolutional Neural Network (CNN) architectures tailored to their specific needs. The interface allows customization of multiple hyperparameters, including the number of convolutional layers, the number of filters, kernel sizes, activation functions, and pooling layers. Additionally, users can add fully connected layers with customizable activation functions, dropout rates, and regularization techniques such as L1 and L2 regularization. This flexibility enables the creation of both simple and complex CNN models, making it suitable for a wide range of applications in digital pathology, from basic image classification to more advanced feature extraction and pattern recognition tasks.
+
+<img src="/Images/Training_4.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
 
 Users can also choose from a variety of optimization algorithms to train their models, including:
 - **Stochastic Gradient Descent (SGD)**: A straightforward and widely-used optimizer that updates model parameters iteratively based on each training example.
@@ -58,12 +60,12 @@ Users can also choose from a variety of optimization algorithms to train their m
 
 These options allow users to fine-tune the learning process to achieve optimal performance for their specific datasets and tasks.
 
-### Evaluation and Analysis
+## Evaluation and Analysis
 
 - **Image Display and Feature Mapping**: Users can select an image index to display the image along with its predicted class. Optionally, feature mapping plots can be generated to visualize the activations of different layers in the model.
 - **Report Generation**: The application generates a detailed report of the predicted and actual class counts, along with a summary table and plot. All reports are displayed in the application without saving to disk.
 
-### User Interface
+## User Interface
 
 - **Dynamic UI Components**: The user interface is built using Shiny components, providing a responsive and interactive experience.
 - **Image and Plot Display**: The application dynamically generates and displays images and plots using base64 encoding, ensuring efficient memory usage and performance.
@@ -71,31 +73,31 @@ These options allow users to fine-tune the learning process to achieve optimal p
 
 ### Detailed Workflow
 
-### Initialization and Logging
+## Initialization and Logging
 
 The application initializes with the creation of a log file that records all activities, ensuring traceability and debugging ease. Real-time notifications keep users informed about the status and progress of their tasks.
 
-### Dataset Loading and Preprocessing
+## Dataset Loading and Preprocessing
 
 Users upload a dataset in pickle format. The dataset is loaded into memory, normalized, and reshaped for further processing. Additionally, a classes file can be uploaded to define the classes used in the dataset, aiding in accurate labeling and classification.
 
-### Model Loading and Summary
+## Model Loading and Summary
 
 Users can upload a pre-trained model, and the application extracts the model path from the log file. The loaded model's architecture is summarized and displayed in a tabular format, providing insights into the structure and parameters of each layer.
 
-### Annotation Processing and Dataset Creation
+## Annotation Processing and Dataset Creation
 
 The application integrates with Labelme, allowing users to define regions of interest and label cells in specimen images. Uploaded image and annotation files are processed to extract cells, classify them, and create a new dataset. This process is optimized to handle images in memory, minimizing disk usage.
 
-### Model Training
+## Model Training
 
 Users can configure various parameters for model training, including data augmentation settings. The application trains the model while displaying real-time progress. Early stopping and learning rate reduction techniques are employed to optimize training. Upon completion, the trained model and log file are saved to disk, and training plots are generated on-demand.
 
-### Evaluation and Analysis
+## Evaluation and Analysis
 
 Users can select images to display along with their predicted classes. Feature mapping plots can be generated to visualize model activations. The application generates detailed reports of predicted and actual class counts, which are displayed dynamically within the application.
 
-### User Interface
+## User Interface
 
 The user interface, built with Shiny components, provides a responsive and interactive experience. Images and plots are generated dynamically using base64 encoding, ensuring efficient memory usage and performance.
 
@@ -103,23 +105,6 @@ The user interface, built with Shiny components, provides a responsive and inter
 1. Download the latest version of CINNAMON-GUI from our [official repository](https://github.com/lunanfoldomics/Cinnamon-GUI/).
 2. Follow the installation guide provided in this `README.md` document to set up the software on your system.
 
-
-## Cinnamon-GUI: Now a Shiny App in Python (July 2024)
-Cinnamon-GUI has evolved from its initial implementation with ipywidgets for Jupyter Lab and Notebook to a fully-fledged Shiny app in Python. This transition brings several advantages, notably an enhanced user interface and improved interactivity. The Shiny framework allows for dynamic and responsive web applications, making it more straightforward for users to interact with machine learning models and visualize results in real time. This update ensures that Cinnamon-GUI remains at the forefront of digital pathology tools, providing a more robust and user-friendly experience for researchers and clinicians.
-
-The general CINNAMON-GUI architecture can be described as following:
-
-<img src="/Images/Training_4.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
-
-But it can be modified by the user depending on the type of input and according to needs.
-
-The general structure of the application is as follows:
-
-1. Tab for dataset loading: Allows loading a dataset of images in pickle format.
-2. Tab for model training: This feature-rich tab equips you with controls to fine-tune model training, such as the number of epochs, batch size, and a variety of CNN architecture options. This flexibility allows you to adapt the training process to your specific needs, giving you a sense of control over your work.
-3. Tab for model loading: Allows loading a previously trained CNN model.
-4. Tab for model testing: This tab contains a widget for selecting an image from the dataset and displaying the model's prediction. It also allows you to display feature maps from various layers of the CNN.
-5. Tab for learning plot visualization: Displays the model's training progress plot over time.
 
 Cinnamon-GUI has undergone rigorous testing in MacOS environments for M1 processors.
 
