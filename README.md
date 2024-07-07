@@ -15,28 +15,28 @@ Cinnamon-GUI has evolved from its initial implementation with ipywidgets for Jup
 
 ### Key Features
 
-### 1. Initialization and Logging
+### Initialization and Logging
 
 - **Log Initialization**: The application initializes a log file (`log.txt`) at startup to record all activities and messages throughout the session.
 - **Notification System**: Provides real-time notifications to users about the status and progress of various operations.
 
-### 2. Dataset Loading and Preprocessing
+### Dataset Loading and Preprocessing
 
 - **Dataset Upload**: Users can upload a dataset in the form of a pickle file. The dataset is then loaded into memory, normalized, and reshaped for processing.
 - **Class Definitions**: Users can upload a classes file (TSV format) to define the classes used in the dataset. These classes are used for labeling and classification during model training and evaluation.
 
-### 3. Model Loading and Summary
+### Model Loading and Summary
 
 - **Model Upload**: Users can upload a pre-trained model file. The application extracts the model path from the log and loads the model.
 - **Model Summary**: The loaded model's architecture is summarized and displayed in a tabular format, providing detailed information about each layer and its parameters.
 
-### 4. Annotation Processing and Dataset Creation
+### Annotation Processing and Dataset Creation
 
 - **Labelme Integration**: The application can open Labelme for defining regions of interest (ROIs) and labeling cells in specimen images.
 - **Annotation Processing**: Users can upload an image file and its corresponding annotation file. The application processes these annotations to extract cells, classify them, and create a new dataset.
 - **In-Memory Image Handling**: All images are handled in memory using `BytesIO` and base64 encoding, ensuring that no intermediate files are saved to disk.
 
-### 5. Model Training
+### Model Training
 
 - **Training Configuration**: Users can configure various parameters for training the model, including the seed, epochs, batch size, learning rate, and data augmentation settings.
 - **Training Process**: The application trains the model using the specified configuration. Progress is displayed in real-time, including a progress bar and status messages.
@@ -58,18 +58,18 @@ Users can also choose from a variety of optimization algorithms to train their m
 
 These options allow users to fine-tune the learning process to achieve optimal performance for their specific datasets and tasks.
 
-### 6. Evaluation and Analysis
+### Evaluation and Analysis
 
 - **Image Display and Feature Mapping**: Users can select an image index to display the image along with its predicted class. Optionally, feature mapping plots can be generated to visualize the activations of different layers in the model.
 - **Report Generation**: The application generates a detailed report of the predicted and actual class counts, along with a summary table and plot. All reports are displayed in the application without saving to disk.
 
-### 7. User Interface
+### User Interface
 
 - **Dynamic UI Components**: The user interface is built using Shiny components, providing a responsive and interactive experience.
 - **Image and Plot Display**: The application dynamically generates and displays images and plots using base64 encoding, ensuring efficient memory usage and performance.
 
 
-## Detailed Workflow
+### Detailed Workflow
 
 ### Initialization and Logging
 
