@@ -28,12 +28,12 @@ The user interface, built with Shiny components, provides a responsive and inter
 - **Dataset Upload**: Users can upload a dataset in the form of a pickle file. The dataset is then loaded into memory, normalized, and reshaped for processing.
 - **Class Definitions**: Users can upload a classes file (TSV format) to define the classes used in the dataset. These classes are used for labeling and classification during model training and evaluation.
 
-## Model Loading and Summary
+### Model Loading and Summary
 
 - **Model Upload**: Users can upload a pre-trained model file. The application extracts the model path from the log and loads the model.
 - **Model Summary**: The loaded model's architecture is summarized and displayed in a tabular format, providing detailed information about each layer and its parameters.
 
-## Annotation Processing and Dataset Creation
+### Annotation Processing and Dataset Creation
 
 - **Labelme Integration**: The application can open Labelme for defining regions of interest (ROIs) and labeling cells in specimen images.
 - **Annotation Processing**: Users can upload an image file and its corresponding annotation file. The application processes these annotations to extract cells, classify them, and create a new dataset.
@@ -41,7 +41,7 @@ The user interface, built with Shiny components, provides a responsive and inter
   
 <img src="/Images/Annotations.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
 
-## Model Training
+### Model Training
 
 - **Training Configuration**: Users can configure various parameters for training the model, including the seed, epochs, batch size, learning rate, and data augmentation settings.
 - **Training Process**: The application trains the model using the specified configuration. Progress is displayed in real-time, including a progress bar and status messages.
@@ -50,7 +50,7 @@ The user interface, built with Shiny components, provides a responsive and inter
 
 <img src="/Images/2024.07.04-03.09.05-8791092.learning_plot.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
 
-## CNN Architectures
+### CNN Architectures
 
 Through the Training Tab, users can configure and implement various Convolutional Neural Network (CNN) architectures tailored to their specific needs. The interface allows customization of multiple hyperparameters, including the number of convolutional layers, the number of filters, kernel sizes, activation functions, and pooling layers. Additionally, users can add fully connected layers with customizable activation functions, dropout rates, and regularization techniques such as L1 and L2 regularization. This flexibility enables the creation of both simple and complex CNN models, making it suitable for a wide range of applications in digital pathology, from basic image classification to more advanced feature extraction and pattern recognition tasks.
 
@@ -67,7 +67,7 @@ Users can also choose from a variety of optimization algorithms to train their m
 
 These options allow users to fine-tune the learning process to achieve optimal performance for their specific datasets and tasks.
 
-## Image Augmentation
+### Image Augmentation
 
 The Training Tab includes robust Image Augmentation capabilities that enhance the diversity of the training dataset and improve the generalization of the model. Image Augmentation involves applying various transformations to the training images, which helps the model become invariant to these transformations and thus perform better on unseen data. Users can customize the following augmentation parameters:
 
@@ -81,7 +81,7 @@ The Training Tab includes robust Image Augmentation capabilities that enhance th
 
 These augmentation techniques are applied in real-time during training, generating new variations of the images in each epoch. This process helps prevent overfitting and makes the model more resilient to variations in real-world data.
 
-## Evaluation and Analysis
+### Evaluation and Analysis
 
 - **Image Display and Feature Mapping**: Users can select an image index to display the image along with its predicted class. Optionally, feature mapping plots can be generated to visualize the activations of different layers in the model.
   
@@ -96,14 +96,13 @@ These augmentation techniques are applied in real-time during training, generati
 <img src="/Images/Report.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
 
 
-### Installation
+## Installation
 1. Download the latest version of CINNAMON-GUI from our official repository (https://github.com/lunanfoldomics/Cinnamon-GUI/).
 2. Follow the installation guide provided in this `README.md` document to set up the software on your system.
 
-
 Cinnamon-GUI has undergone rigorous testing in MacOS environments for M1 processors.
 
-## Virtual Environment
+### Virtual Environment
 
 To run the code, we recommend using a conda virtual environment. You can create a virtual environment named `cinnamongui` and install the required dependencies by executing the following commands:
 
@@ -152,7 +151,7 @@ conda deactivate  # On Windows
 source deactivate  # On macOS and Linux
 ```
 
-## Running Cinnamon-Gui
+### Running Cinnamon-Gui
 ```bash
 cd dashboard-tips
 python cinnamon-gui.py
