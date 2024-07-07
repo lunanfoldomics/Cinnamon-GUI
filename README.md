@@ -84,8 +84,7 @@ These augmentation techniques are applied in real-time during training, generati
   
 <img src="/Images/Analysis_3.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
 
-- **Report Generation**: The application generates a detailed report of the predicted and actual class counts, along with a summary table and plot. All reports are displayed in the application without saving to disk.
-- **Performance Testing**: The application generates tests on the testing dataset to evaluate the model's performance. It compares the predicted labels against the actual labels to provide counts of predictions versus actual values.
+- **Performance Testing**: The application generates tests on the testing dataset to evaluate the model's performance. It compares the predicted labels against the actual labels to provide counts of predictions versus actual values. The application generates a detailed report of the predicted and actual class counts, along with a summary table and plot. All reports are displayed in the application without saving to disk.
 
 <img src="/Images/Report_2.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
   
