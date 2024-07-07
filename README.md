@@ -162,6 +162,44 @@ As example of implementation we uses the SIPAKMED Dataset
 
 Download Link: https://www.cs.uoi.gr/~marina/sipakmed.html
 
+The SipakMed database, which consists of 4049 color images of cells from cervical pap smears, represents a vital example of this tool.  Images have been classified into five cellular subclasses: Superficial-Intermediate Cells, Parabasal Cells, Metaplastic Cells, Koilocytes, and Dyskeratocytes. For our work, the database was restructured into a numpy array and subsequently inserted into a Pandas DataFrame, with each row corresponding to a sequence of 65536 pixels, each represented by an RGB triplet for color and associated with an output label. Once loaded into a NumPy vector, the images are reshaped into 256x256 matrices.
+CINNAMON-GUI includes internal functions for image normalization and a suite of functions for randomly splitting the dataset into training and testing sets for CNN learning. Users can select from a wide range of seeds for random splitting via the scikit-learn package using a dedicated sliding bar in the GUI's Training Tab.
+Table 1 illustrates the architecture implemented for classifying the SIPaKMeD dataset. 
+
+| Layer (type)             | Output Shape          | Param #   |
+|--------------------------|-----------------------|-----------|
+| conv2d (Conv2D)          | (None, 254, 254, 32)  | 896       |
+| max_pooling2d (MaxPooling2D) | (None, 127, 127, 32) | 0       |
+| conv2d_1 (Conv2D)        | (None, 125, 125, 64)  | 18496     |
+| max_pooling2d_1 (MaxPooling2D) | (None, 62, 62, 64)  | 0       |
+| conv2d_2 (Conv2D)        | (None, 60, 60, 128)   | 73856     |
+| max_pooling2d_2 (MaxPooling2D) | (None, 30, 30, 128) | 0       |
+| conv2d_3 (Conv2D)        | (None, 28, 28, 256)   | 295168    |
+| max_pooling2d_3 (MaxPooling2D) | (None, 14, 14, 256) | 0       |
+| flatten (Flatten)        | (None, 50176)         | 0         |
+| dense (Dense)            | (None, 256)           | 12845312  |
+| dense_1 (Dense)          | (None, 5)             | 1285      |
+
+Table 1. Detailed Architecture of CINNAMON-GUI.
+
+Other parameters used or this architecture:
+
+```
+rotation_range: 20
+width_shift_range: 0.2
+height_shift_range: 0.2
+shear_range: 0.2
+zoom_range: 0.2
+horizontal_flip: True
+vertical_flip: False
+regularization params: (0.001, 0.001)
+dropout_value: 0.5
+optimizer: Adam
+loss: categorical_crossentropy
+learning_rate: 0.0001
+```
+
+With this architecture, the CNN achieved a training accuracy of 95% on the validation test after 100 epochs of learning, with both regularization parameters set to 0.001.
 Once the SipakMed dataset is downloaded, it needs to be unzipped into a directory, which we might call "sipakmed." The main directory structure of SipakMed is not particularly complex, but it is essential to understand where the images are located within the five cellular categories to correctly construct the pickle file. Therefore, a script must be generated to search for images within the sipakmed directory and generate the pickle file. Here is an example of how this can be done:
 Upload all the necessary Python libraries
 
