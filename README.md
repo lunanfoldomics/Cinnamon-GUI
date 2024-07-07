@@ -81,13 +81,17 @@ These augmentation techniques are applied in real-time during training, generati
 ## Evaluation and Analysis
 
 - **Image Display and Feature Mapping**: Users can select an image index to display the image along with its predicted class. Optionally, feature mapping plots can be generated to visualize the activations of different layers in the model.
-
+  
 <img src="/Images/Analysis_3.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
 
 - **Report Generation**: The application generates a detailed report of the predicted and actual class counts, along with a summary table and plot. All reports are displayed in the application without saving to disk.
+- **Performance Testing**: The application generates tests on the testing dataset to evaluate the model's performance. It compares the predicted labels against the actual labels to provide counts of predictions versus actual values.
+
+<img src="/Images/Report_2.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
+  
+- **External Specimen Screening**: When used to screen an external specimen with unknown characteristics, the application provides a report to identify specific cells, such as cancerous cells in a Pap smear. This allows for precise identification and classification in real-world diagnostic scenarios.
 
 <img src="/Images/Report.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
-<img src="/Images/Report_2.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
 
 ## User Interface
 
