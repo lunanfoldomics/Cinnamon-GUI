@@ -125,6 +125,10 @@ The user interface, built with Shiny components, provides a responsive and inter
 - **Dynamic UI Components**: The user interface is built using Shiny components, providing a responsive and interactive experience.
 - **Image and Plot Display**: The application dynamically generates and displays images and plots using base64 encoding, ensuring efficient memory usage and performance.
 
+
+
+
+
 ### Installation
 1. Download the latest version of CINNAMON-GUI from our [official repository](https://github.com/lunanfoldomics/Cinnamon-GUI/).
 2. Follow the installation guide provided in this `README.md` document to set up the software on your system.
