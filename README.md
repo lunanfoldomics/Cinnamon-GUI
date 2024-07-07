@@ -53,9 +53,6 @@ Based on Shiny Python, CINNAMON-GUI ensures that all images and reports are gene
 - **Dynamic UI Components**: The user interface is built using Shiny components, providing a responsive and interactive experience.
 - **Image and Plot Display**: The application dynamically generates and displays images and plots using base64 encoding, ensuring efficient memory usage and performance.
 
-### 8. Credits and About
-
-- **Credits Section**: The application includes a credits section with information about the product, the company (Lunan Foldomics LLC), and contact details for further inquiries and customization requests.
 
 ## Detailed Workflow
 
