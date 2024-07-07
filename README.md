@@ -92,38 +92,11 @@ These augmentation techniques are applied in real-time during training, generati
 <img src="/Images/Report.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
 
 
-### Detailed Workflow
-
-## Initialization and Logging
-
-The application initializes with the creation of a log file that records all activities, ensuring traceability and debugging ease. Real-time notifications keep users informed about the status and progress of their tasks.
-
-## Dataset Loading and Preprocessing
-
-Users upload a dataset in pickle format. The dataset is loaded into memory, normalized, and reshaped for further processing. Additionally, a classes file can be uploaded to define the classes used in the dataset, aiding in accurate labeling and classification.
-
-## Model Loading and Summary
-
-Users can upload a pre-trained model, and the application extracts the model path from the log file. The loaded model's architecture is summarized and displayed in a tabular format, providing insights into the structure and parameters of each layer.
-
-## Annotation Processing and Dataset Creation
-
-The application integrates with Labelme, allowing users to define regions of interest and label cells in specimen images. Uploaded image and annotation files are processed to extract cells, classify them, and create a new dataset. This process is optimized to handle images in memory, minimizing disk usage.
-
-## Model Training
-
-Users can configure various parameters for model training, including data augmentation settings. The application trains the model while displaying real-time progress. Early stopping and learning rate reduction techniques are employed to optimize training. Upon completion, the trained model and log file are saved to disk, and training plots are generated on-demand.
-
-## Evaluation and Analysis
-
-Users can select images to display along with their predicted classes. Feature mapping plots can be generated to visualize model activations. The application generates detailed reports of predicted and actual class counts, which are displayed dynamically within the application.
-
 ## User Interface
 
 The user interface, built with Shiny components, provides a responsive and interactive experience. Images and plots are generated dynamically using base64 encoding, ensuring efficient memory usage and performance.
 - **Dynamic UI Components**: The user interface is built using Shiny components, providing a responsive and interactive experience.
 - **Image and Plot Display**: The application dynamically generates and displays images and plots using base64 encoding, ensuring efficient memory usage and performance.
-
 
 
 ### Installation
