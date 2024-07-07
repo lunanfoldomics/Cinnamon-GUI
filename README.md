@@ -12,7 +12,7 @@ The user interface, built with Shiny components, provides a responsive and inter
 ## Key Features
 - **Advanced CNN Models**: Utilize state-of-the-art convolutional neural networks optimized for digital pathology.
 - **Multimodal Learning Capabilities**: Cinnamon-Gui is predispoded for integrating multiple types of data to improve analysis accuracy (only for research purpose).
-- **User-Friendly Interface with Dynamic UI Components**: Simplify the workflow with an intuitive GUI, designed for professionals without technical expertise. The user interface is built using Shiny components, providing a responsive and interactive experience.
+- **User-Friendly Interface with Dynamic UI Components**: Simplify the workflow with an intuitive GUI, designed for professionals without technical expertise. 
 - **Image and Plot Display**: The application dynamically generates and displays images and plots using base64 encoding, ensuring efficient memory usage and performance.
 - **Scalable Solutions**: Suitable for individual researchers and large organizations.
 
@@ -30,14 +30,14 @@ The user interface, built with Shiny components, provides a responsive and inter
 
 ### Model Loading and Summary
 
-- **Model Upload**: Users can upload a pre-trained model file. The application extracts the model path from the log and loads the model.
+- **Model Upload**: Users can upload a pre-trained model file.
 - **Model Summary**: The loaded model's architecture is summarized and displayed in a tabular format, providing detailed information about each layer and its parameters.
 
 ### Annotation Processing and Dataset Creation
 
 - **Labelme Integration**: The application can open Labelme for defining regions of interest (ROIs) and labeling cells in specimen images.
 - **Annotation Processing**: Users can upload an image file and its corresponding annotation file. The application processes these annotations to extract cells, classify them, and create a new dataset.
-- **In-Memory Image Handling**: All images are handled in memory using `BytesIO` and base64 encoding, ensuring that no intermediate files are saved to disk.
+- **In-Memory Image Handling**: All images are handled in memory using `BytesIO` and base64 encoding.
   
 <img src="/Images/Annotations.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
 
@@ -158,9 +158,9 @@ python cinnamon-gui.py
 ```
 
 ## Dataset
-As example of implementation we uses the SIPAKMED Dataset.
-The SIPAKMED database, which consists of 4049 color images of cells from cervical pap smears, represents a vital example of this tool.  Images have been classified into five cellular subclasses: Superficial-Intermediate Cells, Parabasal Cells, Metaplastic Cells, Koilocytes, and Dyskeratocytes. For our work, the database was restructured into a numpy array and subsequently inserted into a Pandas DataFrame, with each row corresponding to a sequence of 65536 pixels, each represented by an RGB triplet for color and associated with an output label. Once loaded into a NumPy vector, the images are reshaped into 256x256 matrices.
-Once the SipakMed dataset is downloaded, it needs to be unzipped into a directory, which we might call "sipakmed." The main directory structure of SipakMed is not particularly complex, but it is essential to understand where the images are located within the five cellular categories to correctly construct the pickle file. Therefore, a script must be generated to search for images within the sipakmed directory and generate the pickle file. Here is an example of how this can be done:
+As example of implementation we uses the Sipakmed Dataset.
+The Sipakmed database, which consists of 4049 color images of cells from cervical pap smears, represents a vital example of this tool.  Images have been classified into five cellular subclasses: Superficial-Intermediate Cells, Parabasal Cells, Metaplastic Cells, Koilocytes, and Dyskeratocytes. For our work, the database was restructured into a numpy array and subsequently inserted into a Pandas DataFrame, with each row corresponding to a sequence of 65536 pixels, each represented by an RGB triplet for color and associated with an output label. Once loaded into a NumPy vector, the images are reshaped into 256x256 matrices.
+Once the Sipakmed dataset is downloaded, it needs to be unzipped into a directory, which we might call "sipakmed." The main directory structure of SipakMed is not particularly complex, but it is essential to understand where the images are located within the five cellular categories to correctly construct the pickle file. Therefore, a script must be generated to search for images within the sipakmed directory and generate the pickle file. Here is an example of how this can be done:
 Upload all the necessary Python libraries
 
 ### Creating a Pickle Training Dataset from Sipakmed
@@ -292,11 +292,11 @@ The classes.tsv file for SIPAKMED is the follow:
 
 The classes.tsv file associates numerical labels with more intuitive literal characters. 
 There are no predefined rules for generating class names, but using only a short class name is a good practice. Using letters with at most two characters to define a label is better. Remember to start with the label with a zero value when defining the first class, as we are in a Python system, and we know that Python always starts from zero and never from one!
-The classes have been abbreviated to letters to make the various output more readable. They correspond respectively to the five classes 'Diskeratotic,' 'Koilocytes,' 'Metaplastic,' 'Parabasal,' and 'Superficial-Intermediate,' as reported in the SIPAKMED dataset.
+The classes have been abbreviated to letters to make the various output more readable. They correspond respectively to the five classes 'Diskeratotic,' 'Koilocytes,' 'Metaplastic,' 'Parabasal,' and 'Superficial-Intermediate,' as reported in the Sipakmed dataset.
 Generating your dataset.pickle and classes. tsv files is a straightforward process. Always ensure that a classes.tsv file accompanies your dataset and is located in the same directory as the pickle file. Additionally, make sure that both files share the same name. For example, if you decide to name your dataset.pickle 256X256.pickle, ensure that its accompanying classes file is named 256X256.classes.tsv
 
 CINNAMON-GUI includes internal functions for image normalization and a suite of functions for randomly splitting the dataset into training and testing sets for CNN learning. Users can select from a wide range of seeds for random splitting via the scikit-learn package using a dedicated sliding bar in the GUI's Training Tab.
-Table 1 illustrates the architecture implemented for classifying the SIPaKMeD dataset. 
+The Table illustrates the architecture implemented for classifying the Sipakmed. 
 
 | Layer (type)             | Output Shape          | Param #   |
 |--------------------------|-----------------------|-----------|
@@ -312,7 +312,6 @@ Table 1 illustrates the architecture implemented for classifying the SIPaKMeD da
 | dense (Dense)            | (None, 256)           | 12845312  |
 | dense_1 (Dense)          | (None, 5)             | 1285      |
 
-Table 1. Detailed Architecture of CINNAMON-GUI.
 
 Other parameters used or this architecture:
 
