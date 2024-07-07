@@ -35,8 +35,8 @@ Cinnamon-GUI has evolved from its initial implementation with ipywidgets for Jup
 - **Labelme Integration**: The application can open Labelme for defining regions of interest (ROIs) and labeling cells in specimen images.
 - **Annotation Processing**: Users can upload an image file and its corresponding annotation file. The application processes these annotations to extract cells, classify them, and create a new dataset.
 - **In-Memory Image Handling**: All images are handled in memory using `BytesIO` and base64 encoding, ensuring that no intermediate files are saved to disk.
-- 
-<img src="/Images/Training_4.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
+  
+<img src="/Images/Annotation.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
 
 ## Model Training
 
