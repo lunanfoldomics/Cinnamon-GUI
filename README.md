@@ -62,6 +62,20 @@ Users can also choose from a variety of optimization algorithms to train their m
 
 These options allow users to fine-tune the learning process to achieve optimal performance for their specific datasets and tasks.
 
+## Image Augmentation
+
+The Training Tab includes robust Image Augmentation capabilities that enhance the diversity of the training dataset and improve the generalization of the model. Image Augmentation involves applying various transformations to the training images, which helps the model become invariant to these transformations and thus perform better on unseen data. Users can customize the following augmentation parameters:
+
+- **Rotation Range**: Randomly rotates images within a specified degree range, allowing the model to become invariant to rotational changes.
+- **Width Shift Range (W-shift)**: Randomly shifts images horizontally, enabling the model to handle horizontal translations of objects within the images.
+- **Height Shift Range (H-shift)**: Randomly shifts images vertically, helping the model cope with vertical translations of objects.
+- **Shear Range**: Applies shearing transformations to the images, effectively tilting them to simulate changes in the camera angle or object orientation.
+- **Zoom Range**: Randomly zooms into images, allowing the model to be robust to variations in object size within the images.
+- **Horizontal Flip**: Randomly flips images horizontally, enhancing the model's ability to recognize objects irrespective of their left-right orientation.
+- **Vertical Flip**: Randomly flips images vertically, useful for datasets where objects can appear upside down.
+
+These augmentation techniques are applied in real-time during training, generating new variations of the images in each epoch. This process helps prevent overfitting and makes the model more resilient to variations in real-world data.
+
 ## Evaluation and Analysis
 
 - **Image Display and Feature Mapping**: Users can select an image index to display the image along with its predicted class. Optionally, feature mapping plots can be generated to visualize the activations of different layers in the model.
