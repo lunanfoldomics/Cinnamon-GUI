@@ -159,9 +159,6 @@ python cinnamon-gui.py
 
 ## Dataset
 As example of implementation we uses the SIPAKMED Dataset
-
-Download Link: https://www.cs.uoi.gr/~marina/sipakmed.html
-
 The SipakMed database, which consists of 4049 color images of cells from cervical pap smears, represents a vital example of this tool.  Images have been classified into five cellular subclasses: Superficial-Intermediate Cells, Parabasal Cells, Metaplastic Cells, Koilocytes, and Dyskeratocytes. For our work, the database was restructured into a numpy array and subsequently inserted into a Pandas DataFrame, with each row corresponding to a sequence of 65536 pixels, each represented by an RGB triplet for color and associated with an output label. Once loaded into a NumPy vector, the images are reshaped into 256x256 matrices.
 CINNAMON-GUI includes internal functions for image normalization and a suite of functions for randomly splitting the dataset into training and testing sets for CNN learning. Users can select from a wide range of seeds for random splitting via the scikit-learn package using a dedicated sliding bar in the GUI's Training Tab.
 Table 1 illustrates the architecture implemented for classifying the SIPaKMeD dataset. 
@@ -185,6 +182,10 @@ Table 1. Detailed Architecture of CINNAMON-GUI.
 Other parameters used or this architecture:
 
 ```
+seed: 8791092
+total epochs: 100
+test size: 0.2
+batch size: 32
 rotation_range: 20
 width_shift_range: 0.2
 height_shift_range: 0.2
@@ -197,11 +198,16 @@ dropout_value: 0.5
 optimizer: Adam
 loss: categorical_crossentropy
 learning_rate: 0.0001
+
 ```
 
 With this architecture, the CNN achieved a training accuracy of 95% on the validation test after 100 epochs of learning, with both regularization parameters set to 0.001.
 Once the SipakMed dataset is downloaded, it needs to be unzipped into a directory, which we might call "sipakmed." The main directory structure of SipakMed is not particularly complex, but it is essential to understand where the images are located within the five cellular categories to correctly construct the pickle file. Therefore, a script must be generated to search for images within the sipakmed directory and generate the pickle file. Here is an example of how this can be done:
 Upload all the necessary Python libraries
+
+### Creating a Pickle Training Dataset from Sipakmed
+
+Download Link: https://www.cs.uoi.gr/~marina/sipakmed.html
 
 ```
 # routine for converting Bmp to a Pickle Dataset
