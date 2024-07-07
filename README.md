@@ -5,7 +5,7 @@
 ## Version 0.4.2
 
 CINNAMON-GUI is an advanced digital pathology tool that leverages the power of convolutional neural networks (CNN) and multimodal learning to provide an intuitive graphical user interface for research professionals. This tool is designed to enhance the analysis and interpretation of pathological samples, making it easier to study various diseases.
-Based on Shiny Python, CINNAMON-GUI ensures that all images and reports are generated on-demand, minimizing disk access and enhancing performance.
+Cinnamon-GUI has evolved from its initial implementation with ipywidgets for Jupyter Lab and Notebook to a fully-fledged Shiny app in Python. This transition brings several advantages, notably an enhanced user interface and improved interactivity. The Shiny framework allows for dynamic and responsive web applications, making it more straightforward for users to interact with machine learning models and visualize results in real time. This update ensures that Cinnamon-GUI remains at the forefront of digital pathology tools, providing a more robust and user-friendly experience for researchers and clinicians.
 
 ### General Features
 - **Advanced CNN Models**: Utilize state-of-the-art convolutional neural networks optimized for digital pathology.
@@ -42,6 +42,21 @@ Based on Shiny Python, CINNAMON-GUI ensures that all images and reports are gene
 - **Training Process**: The application trains the model using the specified configuration. Progress is displayed in real-time, including a progress bar and status messages.
 - **Early Stopping and Learning Rate Reduction**: The training process includes callbacks for early stopping and reducing the learning rate based on validation loss.
 - **Model and Log Saving**: The trained model and log file are automatically saved to disk upon completion of training.
+
+### CNN Architectures
+
+Through the Training Tab, users can configure and implement various Convolutional Neural Network (CNN) architectures tailored to their specific needs. The interface allows customization of multiple hyperparameters, including the number of convolutional layers, the number of filters, kernel sizes, activation functions, and pooling layers. Additionally, users can add fully connected layers with customizable activation functions, dropout rates, and regularization techniques such as L1 and L2 regularization. This flexibility enables the creation of both simple and complex CNN models, making it suitable for a wide range of applications in digital pathology, from basic image classification to more advanced feature extraction and pattern recognition tasks.
+
+Users can also choose from a variety of optimization algorithms to train their models, including:
+- **Stochastic Gradient Descent (SGD)**: A straightforward and widely-used optimizer that updates model parameters iteratively based on each training example.
+- **Adam**: Combines the benefits of two other extensions of stochastic gradient descent, Adaptive Gradient Algorithm (AdaGrad) and Root Mean Square Propagation (RMSProp), making it efficient for large datasets and high-dimensional parameter spaces.
+- **RMSprop**: An adaptive learning rate method designed to perform well in the online and non-stationary settings.
+- **Adagrad**: Adapts the learning rate to the parameters, performing larger updates for infrequent and smaller updates for frequent parameters.
+- **Adadelta**: An extension of Adagrad that seeks to reduce its aggressive, monotonically decreasing learning rate.
+- **Adamax**: A variant of Adam based on the infinity norm.
+- **Nadam**: Combines Adam and Nesterov Accelerated Gradient (NAG) to provide better convergence in some scenarios.
+
+These options allow users to fine-tune the learning process to achieve optimal performance for their specific datasets and tasks.
 
 ### 6. Evaluation and Analysis
 
