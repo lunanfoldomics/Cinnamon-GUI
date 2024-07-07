@@ -92,10 +92,6 @@ These augmentation techniques are applied in real-time during training, generati
 
 <img src="/Images/Report.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
 
-### User Interface
-
-- **Dynamic UI Components**: The user interface is built using Shiny components, providing a responsive and interactive experience.
-- **Image and Plot Display**: The application dynamically generates and displays images and plots using base64 encoding, ensuring efficient memory usage and performance.
 
 ### Detailed Workflow
 
@@ -126,6 +122,8 @@ Users can select images to display along with their predicted classes. Feature m
 ## User Interface
 
 The user interface, built with Shiny components, provides a responsive and interactive experience. Images and plots are generated dynamically using base64 encoding, ensuring efficient memory usage and performance.
+- **Dynamic UI Components**: The user interface is built using Shiny components, providing a responsive and interactive experience.
+- **Image and Plot Display**: The application dynamically generates and displays images and plots using base64 encoding, ensuring efficient memory usage and performance.
 
 ### Installation
 1. Download the latest version of CINNAMON-GUI from our [official repository](https://github.com/lunanfoldomics/Cinnamon-GUI/).
