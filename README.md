@@ -92,12 +92,10 @@ These augmentation techniques are applied in real-time during training, generati
 
 <img src="/Images/Report.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
 
-## User Interface
+### User Interface
 
 - **Dynamic UI Components**: The user interface is built using Shiny components, providing a responsive and interactive experience.
 - **Image and Plot Display**: The application dynamically generates and displays images and plots using base64 encoding, ensuring efficient memory usage and performance.
-
-
 
 ### Detailed Workflow
 
