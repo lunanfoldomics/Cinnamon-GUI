@@ -45,6 +45,8 @@ Cinnamon-GUI has evolved from its initial implementation with ipywidgets for Jup
 - **Early Stopping and Learning Rate Reduction**: The training process includes callbacks for early stopping and reducing the learning rate based on validation loss.
 - **Model and Log Saving**: The trained model and log file are automatically saved to disk upon completion of training.
 
+<img src="/Images/2024.07.04-03.09.05-8791092.learning_plot.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
+
 ## CNN Architectures
 
 Through the Training Tab, users can configure and implement various Convolutional Neural Network (CNN) architectures tailored to their specific needs. The interface allows customization of multiple hyperparameters, including the number of convolutional layers, the number of filters, kernel sizes, activation functions, and pooling layers. Additionally, users can add fully connected layers with customizable activation functions, dropout rates, and regularization techniques such as L1 and L2 regularization. This flexibility enables the creation of both simple and complex CNN models, making it suitable for a wide range of applications in digital pathology, from basic image classification to more advanced feature extraction and pattern recognition tasks.
