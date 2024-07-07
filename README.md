@@ -14,30 +14,78 @@ Based on Shiny Python, CINNAMON-GUI ensures that all images and reports are gene
 - **Scalable Solutions**: Suitable for individual researchers and large organizations.
 
 ### Key Features
-##1. Initialization and Logging
-- Log Initialization: The application initializes a log file (log.txt) at startup to record all activities and messages throughout the session.
-- Notification System: Provides real-time notifications to users about the status and progress of various operations.
-##2. Dataset Loading and Preprocessing
-- Dataset Upload: Users can upload a dataset in the form of a pickle file. The dataset is then loaded into memory, normalized, and reshaped for processing.
-- Class Definitions: Users can upload a classes file (TSV format) to define the classes used in the dataset. These classes are used for labeling and classification during model training and evaluation.
-##3. Model Loading and Summary
-- Model Upload: Users can upload a pre-trained model file. The application extracts the model path from the log and loads the model.
-- Model Summary: The loaded model's architecture is summarized and displayed in a tabular format, providing detailed information about each layer and its parameters.
-##4. Annotation Processing and Dataset Creation
-- Labelme Integration: The application can open Labelme for defining regions of interest (ROIs) and labeling cells in specimen images.
-- Annotation Processing: Users can upload an image file and its corresponding annotation file. The application processes these annotations to extract cells, classify them, and create a new dataset.
-In-Memory Image Handling: All images are handled in memory using BytesIO and base64 encoding, ensuring that no intermediate files are saved to disk.
-##5. Model Training
-- Training Configuration: Users can configure various parameters for training the model, including the seed, epochs, batch size, learning rate, and data augmentation settings.
-- Training Process: The application trains the model using the specified configuration. Progress is displayed in real-time, including a progress bar and status messages.
-- Early Stopping and Learning Rate Reduction: The training process includes callbacks for early stopping and reducing the learning rate based on validation loss.
-- Model and Log Saving: The trained model and log file are automatically saved to disk upon completion of training.
-##6. Evaluation and Analysis
-- Image Display and Feature Mapping: Users can select an image index to display the image along with its predicted class. Optionally, feature mapping plots can be generated to visualize the activations of different layers in the model.
-- Report Generation: The application generates a detailed report of the predicted and actual class counts, along with a summary table and plot. All reports are displayed in the application without saving to disk.
-##7. User Interface
-- Dynamic UI Components: The user interface is built using Shiny components, providing a responsive and interactive experience.
-- Image and Plot Display: The application dynamically generates and displays images and plots using base64 encoding, ensuring efficient memory usage and performance.
+
+### 1. Initialization and Logging
+
+- **Log Initialization**: The application initializes a log file (`log.txt`) at startup to record all activities and messages throughout the session.
+- **Notification System**: Provides real-time notifications to users about the status and progress of various operations.
+
+### 2. Dataset Loading and Preprocessing
+
+- **Dataset Upload**: Users can upload a dataset in the form of a pickle file. The dataset is then loaded into memory, normalized, and reshaped for processing.
+- **Class Definitions**: Users can upload a classes file (TSV format) to define the classes used in the dataset. These classes are used for labeling and classification during model training and evaluation.
+
+### 3. Model Loading and Summary
+
+- **Model Upload**: Users can upload a pre-trained model file. The application extracts the model path from the log and loads the model.
+- **Model Summary**: The loaded model's architecture is summarized and displayed in a tabular format, providing detailed information about each layer and its parameters.
+
+### 4. Annotation Processing and Dataset Creation
+
+- **Labelme Integration**: The application can open Labelme for defining regions of interest (ROIs) and labeling cells in specimen images.
+- **Annotation Processing**: Users can upload an image file and its corresponding annotation file. The application processes these annotations to extract cells, classify them, and create a new dataset.
+- **In-Memory Image Handling**: All images are handled in memory using `BytesIO` and base64 encoding, ensuring that no intermediate files are saved to disk.
+
+### 5. Model Training
+
+- **Training Configuration**: Users can configure various parameters for training the model, including the seed, epochs, batch size, learning rate, and data augmentation settings.
+- **Training Process**: The application trains the model using the specified configuration. Progress is displayed in real-time, including a progress bar and status messages.
+- **Early Stopping and Learning Rate Reduction**: The training process includes callbacks for early stopping and reducing the learning rate based on validation loss.
+- **Model and Log Saving**: The trained model and log file are automatically saved to disk upon completion of training.
+
+### 6. Evaluation and Analysis
+
+- **Image Display and Feature Mapping**: Users can select an image index to display the image along with its predicted class. Optionally, feature mapping plots can be generated to visualize the activations of different layers in the model.
+- **Report Generation**: The application generates a detailed report of the predicted and actual class counts, along with a summary table and plot. All reports are displayed in the application without saving to disk.
+
+### 7. User Interface
+
+- **Dynamic UI Components**: The user interface is built using Shiny components, providing a responsive and interactive experience.
+- **Image and Plot Display**: The application dynamically generates and displays images and plots using base64 encoding, ensuring efficient memory usage and performance.
+
+### 8. Credits and About
+
+- **Credits Section**: The application includes a credits section with information about the product, the company (Lunan Foldomics LLC), and contact details for further inquiries and customization requests.
+
+## Detailed Workflow
+
+### Initialization and Logging
+
+The application initializes with the creation of a log file that records all activities, ensuring traceability and debugging ease. Real-time notifications keep users informed about the status and progress of their tasks.
+
+### Dataset Loading and Preprocessing
+
+Users upload a dataset in pickle format. The dataset is loaded into memory, normalized, and reshaped for further processing. Additionally, a classes file can be uploaded to define the classes used in the dataset, aiding in accurate labeling and classification.
+
+### Model Loading and Summary
+
+Users can upload a pre-trained model, and the application extracts the model path from the log file. The loaded model's architecture is summarized and displayed in a tabular format, providing insights into the structure and parameters of each layer.
+
+### Annotation Processing and Dataset Creation
+
+The application integrates with Labelme, allowing users to define regions of interest and label cells in specimen images. Uploaded image and annotation files are processed to extract cells, classify them, and create a new dataset. This process is optimized to handle images in memory, minimizing disk usage.
+
+### Model Training
+
+Users can configure various parameters for model training, including data augmentation settings. The application trains the model while displaying real-time progress. Early stopping and learning rate reduction techniques are employed to optimize training. Upon completion, the trained model and log file are saved to disk, and training plots are generated on-demand.
+
+### Evaluation and Analysis
+
+Users can select images to display along with their predicted classes. Feature mapping plots can be generated to visualize model activations. The application generates detailed reports of predicted and actual class counts, which are displayed dynamically within the application.
+
+### User Interface
+
+The user interface, built with Shiny components, provides a responsive and interactive experience. Images and plots are generated dynamically using base64 encoding, ensuring efficient memory usage and performance.
 
 ### Installation
 1. Download the latest version of CINNAMON-GUI from our [official repository](https://github.com/lunanfoldomics/Cinnamon-GUI/).
