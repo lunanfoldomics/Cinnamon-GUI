@@ -6,6 +6,9 @@
 
 CINNAMON-GUI is an advanced digital pathology tool that leverages the power of convolutional neural networks (CNN) and multimodal learning to provide an intuitive graphical user interface for research professionals. This tool is designed to enhance the analysis and interpretation of pathological samples, making it easier to study various diseases.
 Cinnamon-GUI has evolved from its initial implementation with ipywidgets for Jupyter Lab and Notebook to a fully-fledged Shiny app in Python. This transition brings several advantages, notably an enhanced user interface and improved interactivity. The Shiny framework allows for dynamic and responsive web applications, making it more straightforward for users to interact with machine learning models and visualize results in real time. This update ensures that Cinnamon-GUI remains at the forefront of digital pathology tools, providing a more robust and user-friendly experience for researchers and clinicians.
+The user interface, built with Shiny components, provides a responsive and interactive experience. Images and plots are generated dynamically using base64 encoding, ensuring efficient memory usage and performance.
+- **Dynamic UI Components**: The user interface is built using Shiny components, providing a responsive and interactive experience.
+- **Image and Plot Display**: The application dynamically generates and displays images and plots using base64 encoding, ensuring efficient memory usage and performance.
 
 ### Key Features
 - **Advanced CNN Models**: Utilize state-of-the-art convolutional neural networks optimized for digital pathology.
@@ -13,6 +16,7 @@ Cinnamon-GUI has evolved from its initial implementation with ipywidgets for Jup
 - **User-Friendly Interface**: Simplify the workflow with an intuitive GUI, designed for professionals without technical expertise.
 - **Scalable Solutions**: Suitable for individual researchers and large organizations.
 
+### Detailed Workflow
 
 ## Initialization and Logging
 
@@ -90,13 +94,6 @@ These augmentation techniques are applied in real-time during training, generati
 - **External Specimen Screening**: When used to screen an external specimen with unknown characteristics, the application provides a report to identify specific cells, such as cancerous cells in a Pap smear. This allows for precise identification and classification in real-world diagnostic scenarios.
 
 <img src="/Images/Report.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
-
-
-## User Interface
-
-The user interface, built with Shiny components, provides a responsive and interactive experience. Images and plots are generated dynamically using base64 encoding, ensuring efficient memory usage and performance.
-- **Dynamic UI Components**: The user interface is built using Shiny components, providing a responsive and interactive experience.
-- **Image and Plot Display**: The application dynamically generates and displays images and plots using base64 encoding, ensuring efficient memory usage and performance.
 
 
 ### Installation
