@@ -81,8 +81,12 @@ These augmentation techniques are applied in real-time during training, generati
 ## Evaluation and Analysis
 
 - **Image Display and Feature Mapping**: Users can select an image index to display the image along with its predicted class. Optionally, feature mapping plots can be generated to visualize the activations of different layers in the model.
+
 <img src="/Images/FeatureMapping.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
+
 - **Report Generation**: The application generates a detailed report of the predicted and actual class counts, along with a summary table and plot. All reports are displayed in the application without saving to disk.
+
+<img src="/Images/Report.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
 
 ## User Interface
 
