@@ -7,13 +7,12 @@
 CINNAMON-GUI is an advanced digital pathology tool that leverages the power of convolutional neural networks (CNN) and multimodal learning to provide an intuitive graphical user interface for research professionals. This tool is designed to enhance the analysis and interpretation of pathological samples, making it easier to study various diseases.
 Cinnamon-GUI has evolved from its initial implementation with ipywidgets for Jupyter Lab and Notebook to a fully-fledged Shiny app in Python. This transition brings several advantages, notably an enhanced user interface and improved interactivity. The Shiny framework allows for dynamic and responsive web applications, making it more straightforward for users to interact with machine learning models and visualize results in real time. This update ensures that Cinnamon-GUI remains at the forefront of digital pathology tools, providing a more robust and user-friendly experience for researchers and clinicians.
 
-### General Features
+### Key Features
 - **Advanced CNN Models**: Utilize state-of-the-art convolutional neural networks optimized for digital pathology.
 - **Multimodal Learning Capabilities**: Cinnamon-Gui is predispoded for integrating multiple types of data to improve analysis accuracy (only for research purpose).
 - **User-Friendly Interface**: Simplify the workflow with an intuitive GUI, designed for professionals without technical expertise.
 - **Scalable Solutions**: Suitable for individual researchers and large organizations.
 
-### Key Features
 
 ## Initialization and Logging
 
@@ -127,10 +126,8 @@ The user interface, built with Shiny components, provides a responsive and inter
 
 
 
-
-
 ### Installation
-1. Download the latest version of CINNAMON-GUI from our [official repository](https://github.com/lunanfoldomics/Cinnamon-GUI/).
+1. Download the latest version of CINNAMON-GUI from our official repository (https://github.com/lunanfoldomics/Cinnamon-GUI/).
 2. Follow the installation guide provided in this `README.md` document to set up the software on your system.
 
 
