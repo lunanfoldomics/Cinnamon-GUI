@@ -98,6 +98,7 @@ These augmentation techniques are applied in real-time during training, generati
 - **Image and Plot Display**: The application dynamically generates and displays images and plots using base64 encoding, ensuring efficient memory usage and performance.
 
 
+
 ### Detailed Workflow
 
 ## Initialization and Logging
