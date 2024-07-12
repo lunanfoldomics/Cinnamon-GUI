@@ -91,7 +91,7 @@ These augmentation techniques are applied in real-time during training, generati
 
 <img src="/Images/Report_2.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
 
--- **Interactive Plot**: An interactive plot feature enhances user interaction. This plot allows for the immediate identification of images classified by the model through a mouse-over function.
+- **Interactive Plot**: An interactive plot feature enhances user interaction. This plot allows for the immediate identification of images classified by the model through a mouse-over function.
 This addition aims to improve the usability and functionality of the app, making the analytical process more intuitive and accessible.
 
 <img src="/Images/Filtered_Data.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
