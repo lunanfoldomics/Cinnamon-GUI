@@ -90,6 +90,11 @@ These augmentation techniques are applied in real-time during training, generati
 - **Performance Testing**: The application generates tests on the testing dataset to evaluate the model's performance. It compares the predicted labels against the actual labels to provide counts of predictions versus actual values. The application generates a detailed report of the predicted and actual class counts, along with a summary table and plot. All reports are displayed in the application without saving to disk.
 
 <img src="/Images/Report_2.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
+
+An interactive plot feature enhances user interaction. This plot allows for the immediate identification of images classified by the model through a mouse-over function.
+This addition aims to improve the usability and functionality of the app, making the analytical process more intuitive and accessible.
+
+<img src="/Images/Filtered_Data.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
   
 - **External Specimen Screening**: When used to screen an external specimen with unknown characteristics, the application provides a report to identify specific cells, such as cancerous cells in a Pap smear. This allows for precise identification and classification in real-world diagnostic scenarios.
 
