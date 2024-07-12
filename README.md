@@ -2,7 +2,7 @@
 
 # CINNAMON-GUI
 ### Convolutional Neural Network And Multimodal Learning with Graphic User Interface for Digital Pathology
-## Version 0.4.2
+## Version 0.4.3
 
 CINNAMON-GUI is an advanced digital pathology tool that leverages the power of convolutional neural networks (CNN) and multimodal learning to provide an intuitive graphical user interface for research professionals. This tool is designed to enhance the analysis and interpretation of pathological samples, making it easier to study various diseases.
 Cinnamon-GUI has evolved from its initial implementation with ipywidgets for Jupyter Lab and Notebook to a fully-fledged Shiny app in Python. This transition brings several advantages, notably an enhanced user interface and improved interactivity. The Shiny framework allows for dynamic and responsive web applications, making it more straightforward for users to interact with machine learning models and visualize results in real time. This update ensures that Cinnamon-GUI remains at the forefront of digital pathology tools, providing a more robust and user-friendly experience for researchers and clinicians.
