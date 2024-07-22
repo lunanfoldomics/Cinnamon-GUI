@@ -18,6 +18,10 @@ The user interface, built with Shiny components, provides a responsive and inter
 
 ## Detailed Workflow
 
+This schematic illustrates two primary operational pathways within the Cinnamon-GUI platform: 1) Data Processing and Model Training Workflow, where users can load pickle files from datasets to train models and generate reports post-testing, and 2) Biospecimen Annotation and Analysis Workflow, where users can load annotated Pap smear images, with annotations applied using the integrated Labelme software. This workflow supports loading the corresponding JSON annotation files and converting them and the images into a pickle dataset format for subsequent cell type prediction and classification. Additionally, this pathway facilitates the creation and expansion of datasets, enhancing the utility of Cinnamon-GUI for diverse research applications.
+
+<img src="/Images/Workflow.png" alt="logo" style="display:block; margin:auto; width:800px; height:auto;">
+
 ### Initialization and Logging
 
 - **Log Initialization**: The application initializes a log file (`log.txt`) at startup to record all activities and messages throughout the session.
