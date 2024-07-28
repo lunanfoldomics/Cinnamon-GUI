@@ -1,2 +1,7 @@
-Download a pre-trained model from:
+Download pre-trained models from Kaggle:
+
+Model-B:
+https://www.kaggle.com/datasets/lucazammataro/cinnamon-gui-model-b-sipakmed/data
+
+Other models:
 https://www.kaggle.com/datasets/lucazammataro/cinnamon-gui-for-sipakmed-95-accuracy
