@@ -1,1 +1,2 @@
-
+Download a pickle version of Sipakmed:
+https://www.kaggle.com/datasets/lucazammataro/sipakmed-dataset-for-cinnamon-gui
