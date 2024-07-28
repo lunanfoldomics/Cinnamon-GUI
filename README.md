@@ -266,6 +266,12 @@ print('bye.')
 
 Congrats! Your  256X256.pickle dataset is ready, and now you can visulize one of the images per time in this way:
 
+Also, you can download a pickle version of Sipakmed from here:
+https://www.kaggle.com/datasets/lucazammataro/sipakmed-dataset-for-cinnamon-gui
+
+and a pre-trained model from here:
+https://www.kaggle.com/datasets/lucazammataro/cinnamon-gui-for-sipakmed-95-accuracy
+
 ```
 # Visualizing dataset
 
