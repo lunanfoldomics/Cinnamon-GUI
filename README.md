@@ -270,8 +270,12 @@ Also, you can download a pickle version of Sipakmed from here:
 
 https://www.kaggle.com/datasets/lucazammataro/sipakmed-dataset-for-cinnamon-gui
 
-and a pre-trained model from here:
+and pre-trained modela from here:
 
+Model-B:
+https://www.kaggle.com/datasets/lucazammataro/cinnamon-gui-model-b-sipakmed/data
+
+Other models:
 https://www.kaggle.com/datasets/lucazammataro/cinnamon-gui-for-sipakmed-95-accuracy
 
 ```
