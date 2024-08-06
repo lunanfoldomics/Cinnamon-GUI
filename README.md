@@ -386,4 +386,6 @@ For support or inquiries, please contact us via email at [lucazammataro@lunanfol
 Stay connected with updates and news:
 - [Twitter](http://twitter.com/LunanFoldomics)
 - [LinkedIn](http://linkedin.com/company/lunan-foldomics-llc)
-  
+
+### How To Cite
+Zammataro L. CINNAMON-GUI: Revolutionizing Pap Smear Analysis with CNN-Based Digital Pathology Image Classification [version 1; peer review: awaiting peer review]. F1000Research 2024, 13:897 (https://doi.org/10.12688/f1000research.154455.1)  
