@@ -1,3 +1,6 @@
+dash
+dash_bootstrap_components
+plotly
 shiny
 os
 io
