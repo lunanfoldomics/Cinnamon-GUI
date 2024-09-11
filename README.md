@@ -129,23 +129,18 @@ source activate cinnamongui  # On macOS and Linux
 To install the necessary packages for Cinnamon-GUI, you can create a requirements.txt file with the following content. This file lists all the dependencies that need to be installed:
 
 ```bash
-shiny
-os
-io
-re
-shutil
-pandas
-numpy
-json
+faicons
+shiny==0.10.2
+shinywidgets==0.3.2
+plotly==5.22.0
+pandas==1.5.3
+ridgeplot
+matplotlib==3.8.0
+numpy==1.23.2
+Pillow==10.4.0  
+scikit_learn==1.3.1  
+#tensorflow_macos==2.11.0 # only for mac users
 tensorflow
-Pillow
-matplotlib
-scikit-learn
-datetime
-pickle
-base64
-tempfile
-asyncio
 labelme
 ```
 
