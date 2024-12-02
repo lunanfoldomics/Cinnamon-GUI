@@ -6,6 +6,7 @@ Lunan Foldomics, Copyright(c) 2024
 
 import subprocess
 import os
+import sys
 import io
 import re
 import shutil
@@ -29,10 +30,13 @@ from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropou
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-
 import plotly.express as px
 from shinywidgets import output_widget, render_widget
 from shiny import App, reactive, render, req, ui
+import signal
+import socket
+
+
 
 # Declaration of global variables as reactive
 model_reactive = reactive.Value(None)
@@ -46,10 +50,22 @@ model_number = None
 model_path = reactive.Value(None)
 specimen_name = None
 model = reactive.Value(None)
-version = "0.4.3"
+version = "0.5.0"
 
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-tf.config.set_visible_devices([], 'GPU')
+#os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+#tf.config.set_visible_devices([], 'GPU')
+
+
+
+def resource_path(relative_path):
+    """Ottiene il percorso assoluto del file, compatibile con PyInstaller."""
+    if hasattr(sys, '_MEIPASS'):
+        return os.path.join(sys._MEIPASS, relative_path)
+    return os.path.join(os.path.abspath("."), relative_path)
+
+# Usa questa funzione per ottenere il percorso del file immagine
+#image_path = resource_path("Images/Cinnamon-Gui-Logo.png")
+
 
 # Utility function
 def max_in_list(lst):
@@ -391,13 +407,22 @@ def get_image_as_base64(path):
         return base64.b64encode(image_file.read()).decode('utf-8')
 
 # Set the logo file path
-logo_file_path = os.path.join(os.getcwd(), "Images", "Cinnamon-Gui-Logo.png")
+
+#logo_file_path = os.path.join(os.getcwd(), "Images", "Cinnamon-Gui-Logo.png")
+logo_file_path = resource_path("Images/Cinnamon-Gui-Logo.png")
+
 logo_base64 = get_image_as_base64(logo_file_path)
+
 # Set the CNN model representation file path
-CNN_representation_file_path = os.path.join(os.getcwd(), "Images", "CNN_model_representation.png")
+#CNN_representation_file_path = os.path.join(os.getcwd(), "Images", "CNN_model_representation.png")
+CNN_representation_file_path = resource_path("Images/CNN_model_representation.png")
+
 CNN_base64 = get_image_as_base64(CNN_representation_file_path)
+
 # Set the small icon file path
-icon_small_file_path = os.path.join(os.getcwd(), "Images", "Cinnamon-Gui-Logo-3.png")
+#icon_small_file_path = os.path.join(os.getcwd(), "Images", "Cinnamon-Gui-Logo-3.png")
+icon_small_file_path = resource_path("Images/Cinnamon-Gui-Logo-3.png")
+
 icon_small_base64 = get_image_as_base64(icon_small_file_path)
 
 # GUI
@@ -821,14 +846,16 @@ def server(input, output, session):
             with open(model_file_path, 'r') as log_file:
                 for line in log_file:
                     match = re.search(r'Log saved in: (.+)', line)
+                    print(match)
+                    #match = os.getcwd()+'/'+match
                     if match:
                         model_path.set(match.group(1))
                         break
 
             print("Model file path:", model_file_path)
             if model_path.get():
-                print("Model path found:", model_path.get())
-                model.set(tf.keras.models.load_model(model_path.get()))
+                print("Model path found:", os.getcwd()+'/data/models/'+str(model_path.get()))
+                model.set(tf.keras.models.load_model(os.getcwd()+'/data/models/'+str(model_path.get())))
                 buffer = io.StringIO()
                 with redirect_stdout(buffer):
                     model.get().summary()
@@ -855,12 +882,49 @@ def server(input, output, session):
         else:
             print("Model directory is None")
 
+
+
+    
     # Invocare Labelme            
     @reactive.Effect
     def _():
         if input.run_labelme() > 0:  
             subprocess.Popen(["labelme"])  # Apri Labelme
             print("Opening Labelme for defining ROIs and labelling cells of interest.")
+
+    '''
+    import os
+    import shutil
+    import subprocess
+    import sys
+
+    # Invocare Labelme
+    @reactive.Effect
+    def _():
+        if input.run_labelme() > 0:
+            try:
+                # Percorso originale di labelme_standalone.exe
+                stable_dir = os.path.dirname(os.path.abspath(sys.executable))
+                labelme_original = os.path.join(stable_dir, "labelme_standalone.exe")
+                
+                # Percorso temporaneo
+                temp_dir = os.path.dirname(__file__)
+                labelme_temp = os.path.join(temp_dir, "labelme_standalone.exe")
+                
+                # Copia l'eseguibile nella directory temporanea
+                if os.path.exists(labelme_original):
+                    shutil.copy(labelme_original, labelme_temp)
+                    subprocess.Popen([labelme_temp], shell=True)
+                    print("Opening Labelme standalone for defining ROIs and labelling cells of interest.")
+                else:
+                    print(
+                        f"Labelme executable not found at: {labelme_original}\n"
+                        "Please ensure labelme_standalone.exe is in the same directory as the Cinnamon-GUI executable."
+                    )
+            except Exception as e:
+                print(f"An error occurred while trying to open Labelme: {e}")
+
+    '''
 
     @reactive.Effect
     @reactive.event(input.process_annotation)
@@ -938,8 +1002,9 @@ def server(input, output, session):
     def saved_model_plot_display():
         print("saved_model_plot_display called")
         if model_loaded.get() and dataset_loaded.get():
-            model_number = extract_model_number(model_path.get())         
-            image_path = model_path.get() + '/' + model_number + '.learning_plot.png'                        
+            #model_number = extract_model_number(model_path.get())         
+            image_path = os.getcwd()+'/'+'/data/models/'+str(model_path.get()) + '/' + str.split(str(model_path.get()),".model")[0] + '.learning_plot.png'  
+            print("image path:", image_path)                      
 
             if not os.path.exists(image_path):
                 print("Image path does not exist:", image_path)
@@ -1143,7 +1208,8 @@ def server(input, output, session):
             show_notification(f'Learning plot saved.')
             print_log(f'Learning plot saved.')            
             plot_image.set(img_str)
-            print_log(f'Log saved in: {model_save_full_path}')                
+            #print_log(f'Log saved in: {model_save_full_path}')    
+            print_log(f'Log saved in: {model_name}')               
             shutil.copyfile(os.getcwd()+'/log.txt', os.path.join(model_save_full_path, f'{timestamp}-{seed}.mod'))                  
 
             test_df = pd.DataFrame([list(X_test.reshape(X_test.shape[0], -1)), list(np.argmax(Y_test, axis=1))]).T
@@ -1344,7 +1410,40 @@ def server(input, output, session):
         else:
             return ui.HTML("No data to display.")
 
-app = App(app_ui, server)
 
-if __name__ == '__main__':
-    app.run()
+
+
+# Function to forcefully release the port
+def release_port(port):
+    try:
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        sock.bind(("127.0.0.1", port))
+        sock.close()
+        print(f"Port {port} successfully released.")
+    except Exception as e:
+        print(f"Error releasing port {port}: {e}")
+
+# Function to handle program termination
+def shutdown_program(signal_received, frame):
+    print("\nShutting down the server...")
+    release_port(8000)  # Release port 8000
+    sys.exit(0)
+
+# Attach termination signals (SIGINT and SIGTERM) to the function
+signal.signal(signal.SIGINT, shutdown_program)  # Capture CTRL+C
+signal.signal(signal.SIGTERM, shutdown_program)  # Capture termination signals from the system
+
+
+
+app = App(app_ui, server) 
+
+if __name__ == "__main__":
+    print("Loading Cinnamon-GUI, please wait...")  # Messaggio di caricamento
+    print("Server running on 127.0.0.1:8000")
+    try:
+        import uvicorn
+        uvicorn.run(app, host="127.0.0.1", port=8000, timeout_keep_alive=600)
+    except KeyboardInterrupt:
+        print("Manual interruption received.")
+        shutdown_program(None, None)
