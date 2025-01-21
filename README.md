@@ -383,4 +383,4 @@ Stay connected with updates and news:
 - [LinkedIn](http://linkedin.com/company/lunan-foldomics-llc)
 
 ### How To Cite
-[Zammataro L. CINNAMON-GUI: Revolutionizing Pap Smear Analysis with CNN-Based Digital Pathology Image Classification [version 1; peer review: 2 approved]. F1000Research 2024, 13:897 (https://doi.org/10.12688/f1000research.154455.1)] (https://doi.org/10.12688/f1000research.154455.1) 
+Zammataro L. CINNAMON-GUI: Revolutionizing Pap Smear Analysis with CNN-Based Digital Pathology Image Classification [version 1; peer review: 2 approved]. F1000Research 2024, 13:897 (https://doi.org/10.12688/f1000research.154455.1)
